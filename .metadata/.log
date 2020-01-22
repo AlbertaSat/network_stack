@@ -1,12 +1,12 @@
-!SESSION 2019-11-25 14:18:19.741 -----------------------------------------------
+!SESSION 2020-01-15 19:57:31.937 -----------------------------------------------
 eclipse.buildId=4.8.0.I20180611-0500
 java.version=1.8.0_144
 java.vendor=Oracle Corporation
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Framework arguments:  -product com.ti.ccstudio.branding.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+Framework arguments:  -product com.ti.ccstudio.branding.product -product com.ti.ccstudio.branding.product -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product -product com.ti.ccstudio.branding.product -data C:\Users\arrooney\RTOSSanity -product com.ti.ccstudio.branding.product
 
-!ENTRY org.eclipse.egit.core 2 0 2019-11-25 14:18:32.561
+!ENTRY org.eclipse.egit.core 2 0 2020-01-15 19:57:33.630
 !MESSAGE Builtin LFS support not present/detected
 !STACK 0
 java.lang.ClassNotFoundException: org.eclipse.jgit.lfs.BuiltinLFS cannot be found by org.eclipse.egit.core_5.0.0.201806131550-r
@@ -95,14 +95,14 @@ java.lang.ClassNotFoundException: org.eclipse.jgit.lfs.BuiltinLFS cannot be foun
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:592)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1498)
 
-!ENTRY com.ti.common.core 1 0 2019-11-25 14:18:33.432
+!ENTRY com.ti.common.core 1 0 2020-01-15 19:57:34.272
 !MESSAGE path=ccs_base/DebugServer
 
-!ENTRY com.ti.common.core 1 0 2019-11-25 14:18:33.438
+!ENTRY com.ti.common.core 1 0 2020-01-15 19:57:34.281
 !MESSAGE debugServerDir=C:/ti/ccs920/ccs/ccs_base/DebugServer
 
-!ENTRY org.eclipse.equinox.event 4 0 2019-11-25 14:18:37.379
-!MESSAGE Exception while dispatching event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/model/application/ApplicationElement/tags/ADD] {ChangedElement=org.eclipse.e4.primaryDataStack=org.eclipse.e4.ui.model.application.ui.basic.impl.PartStackImpl@647aa45c (tags: [org.eclipse.e4.primaryDataStack, EditorStack, active, Maximized], contributorURI: null) (widget: CTabFolder {}, renderer: org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer@a11efe6, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null), org.eclipse.e4.data={ChangedElement=org.eclipse.e4.primaryDataStack=org.eclipse.e4.ui.model.application.ui.basic.impl.PartStackImpl@647aa45c (tags: [org.eclipse.e4.primaryDataStack, EditorStack, active, Maximized], contributorURI: null) (widget: CTabFolder {}, renderer: org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer@a11efe6, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null), AttName=tags, EventType=ADD, Position=3, Widget=CTabFolder {}, NewValue=Maximized}, AttName=tags, EventType=ADD, Position=3, Widget=CTabFolder {}, NewValue=Maximized} to handler org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler@10c67c1c
+!ENTRY org.eclipse.equinox.event 4 0 2020-01-15 19:57:36.861
+!MESSAGE Exception while dispatching event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/model/application/ApplicationElement/tags/ADD] {ChangedElement=org.eclipse.e4.primaryDataStack=org.eclipse.e4.ui.model.application.ui.basic.impl.PartStackImpl@104392ba (tags: [org.eclipse.e4.primaryDataStack, EditorStack, active, Maximized], contributorURI: null) (widget: CTabFolder {}, renderer: org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer@2831c178, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null), org.eclipse.e4.data={ChangedElement=org.eclipse.e4.primaryDataStack=org.eclipse.e4.ui.model.application.ui.basic.impl.PartStackImpl@104392ba (tags: [org.eclipse.e4.primaryDataStack, EditorStack, active, Maximized], contributorURI: null) (widget: CTabFolder {}, renderer: org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer@2831c178, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null), AttName=tags, EventType=ADD, Position=3, Widget=CTabFolder {}, NewValue=Maximized}, AttName=tags, EventType=ADD, Position=3, Widget=CTabFolder {}, NewValue=Maximized} to handler org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler@481f698f
 !STACK 0
 org.eclipse.e4.core.di.InjectionException: java.lang.IllegalArgumentException: 
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:65)
@@ -164,7 +164,7 @@ org.eclipse.e4.core.di.InjectionException: java.lang.IllegalArgumentException:
 	at org.eclipse.jface.action.ControlContribution.fill(ControlContribution.java:101)
 	at org.eclipse.jface.action.ToolBarManager.update(ToolBarManager.java:343)
 	at org.eclipse.e4.ui.workbench.renderers.swt.ToolBarManagerRenderer.subscribeTopicUpdateToBeRendered(ToolBarManagerRenderer.java:213)
-	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
@@ -202,7 +202,7 @@ org.eclipse.e4.core.di.InjectionException: java.lang.IllegalArgumentException:
 	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:727)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.subscribeChildrenHandler(PartRenderingEngine.java:308)
-	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
@@ -266,1187 +266,171 @@ Caused by: java.lang.IllegalArgumentException:
 	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.getElementsToMinimize(MinMaxAddon.java:719)
 	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.maximize(MinMaxAddon.java:690)
 	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.subscribeTopicTagsChanged(MinMaxAddon.java:381)
-	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
 	... 150 more
 
-!ENTRY org.eclipse.launchbar.core 2 0 2019-11-25 14:18:37.931
+!ENTRY org.eclipse.launchbar.core 2 0 2020-01-15 19:57:37.015
 !MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
 
-!ENTRY org.eclipse.launchbar.core 2 0 2019-11-25 14:18:37.943
+!ENTRY org.eclipse.launchbar.core 2 0 2020-01-15 19:57:37.029
 !MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
 
-!ENTRY org.eclipse.launchbar.core 2 0 2019-11-25 14:18:37.954
+!ENTRY org.eclipse.launchbar.core 2 0 2020-01-15 19:57:37.036
 !MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
 
-!ENTRY com.ti.ccstudio.ui 1 0 2019-11-25 14:18:47.501
+!ENTRY com.ti.ccstudio.ui 1 0 2020-01-15 19:57:38.379
 !MESSAGE CCS IDE session started!
 	CCS build: 9.2.0.00013
 	CCS location: C:/ti/ccs920/ccs
-	Workspace location: C:/Users/arrooney/ws_arrooney
+	Workspace location: C:/Users/arrooney/RTOSSanity
 
-!ENTRY com.ti.ccstudio.debug.server 4 214294189 2019-11-25 14:18:47.646
-!MESSAGE Unexpected CCS exit detected [11/23/19 1:02 PM]!!!
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-25 14:18:47.659
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-15 19:57:38.485
 !MESSAGE constructor
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-25 14:18:47.665
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-15 19:57:38.491
 !MESSAGE done with directories
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-25 14:18:47.670
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-15 19:57:38.497
 !MESSAGE loading ti_logger
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-25 14:18:47.675
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-15 19:57:38.502
 !MESSAGE Platform os: win32
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-25 14:18:47.680
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-15 19:57:38.508
 !MESSAGE loading cToolsIF
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-25 14:18:47.697
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-15 19:57:38.514
 !MESSAGE loading cTools
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-25 14:18:47.716
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-15 19:57:38.521
 !MESSAGE loading TraceFactory
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-25 14:18:47.735
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-15 19:57:38.526
 !MESSAGE loading sqlite3
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-25 14:18:47.753
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-15 19:57:38.532
 !MESSAGE loading CloudTrace
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-25 14:18:47.805
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-15 19:57:38.548
 !MESSAGE CloudTrace interface loaded
 
-!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2019-11-25 14:18:47.849
-!MESSAGE CCS HTTP adapter started! [ccs.port:59513] - Open 'http://localhost:59513/ide' in web browser to see listing of available APIs...
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2020-01-15 19:57:38.582
+!MESSAGE CCS HTTP adapter started! [ccs.port:57607] - Open 'http://localhost:57607/ide' in web browser to see listing of available APIs...
 
-!ENTRY com.ti.ccstudio.project.core 2 0 2019-11-25 14:19:12.388
-!MESSAGE Unrecognized option setting '--elf' for tool 'com.ti.ccstudio.buildDefinitions.TMS470_18.12.library.compilerDebug.1352508093'
-
-!ENTRY com.ti.ccstudio.project.core 2 0 2019-11-25 14:19:12.411
-!MESSAGE Unrecognized option setting '--elf' for tool 'com.ti.ccstudio.buildDefinitions.TMS470_18.12.library.compilerRelease.1565401490'
-
-!ENTRY org.eclipse.cdt.core 1 0 2019-11-25 14:19:15.075
-!MESSAGE Indexed 'CAN' (23 sources, 91 headers) in 1.7 sec: 7,601 declarations; 21,129 references; 3 unresolved inclusions; 23 syntax errors; 18 unresolved names (0.063%)
-
-!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2019-11-25 14:19:19.982
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2020-01-15 19:57:57.207
 !MESSAGE No repository found at file:/C:/Users/arrooney/AppData/Local/Temp/ccs_618e5e7f-76f0-4fa8-7d80-8db2541f2667/INSTALLER.
 
-!ENTRY com.ti.ccstudio.project.core 2 0 2019-11-25 14:21:31.431
-!MESSAGE Unrecognized option setting '--elf' for tool 'com.ti.ccstudio.buildDefinitions.TMS470_18.12.exe.compilerDebug.1841609814'
+!ENTRY com.ti.ccstudio.project.core 2 0 2020-01-15 19:58:27.263
+!MESSAGE Unrecognized option setting '--elf' for tool 'com.ti.ccstudio.buildDefinitions.TMS470_18.12.exe.compilerDebug.2117601746'
 
-!ENTRY com.ti.ccstudio.project.core 2 0 2019-11-25 14:21:31.444
-!MESSAGE Unrecognized option setting '--elf' for tool 'com.ti.ccstudio.buildDefinitions.TMS470_18.12.exe.compilerRelease.2117003466'
+!ENTRY com.ti.ccstudio.project.core 2 0 2020-01-15 19:58:27.291
+!MESSAGE Unrecognized option setting '--elf' for tool 'com.ti.ccstudio.buildDefinitions.TMS470_18.12.exe.compilerRelease.1798173354'
 
-!ENTRY org.eclipse.cdt.core 1 0 2019-11-25 14:21:32.160
-!MESSAGE Indexed 'test' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
-!SESSION 2019-11-26 08:44:54.373 -----------------------------------------------
-eclipse.buildId=4.8.0.I20180611-0500
-java.version=1.8.0_144
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Framework arguments:  -product com.ti.ccstudio.branding.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+!ENTRY org.eclipse.cdt.core 1 0 2020-01-15 19:58:30.684
+!MESSAGE Indexed 'RTOSSanity' (37 sources, 93 headers) in 2.23 sec: 9,117 declarations; 36,449 references; 3 unresolved inclusions; 23 syntax errors; 78 unresolved names (0.17%)
 
-!ENTRY org.eclipse.core.resources 2 10035 2019-11-26 08:45:00.004
-!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
-
-!ENTRY com.ti.common.core 1 0 2019-11-26 08:45:00.145
-!MESSAGE path=ccs_base/DebugServer
-
-!ENTRY com.ti.common.core 1 0 2019-11-26 08:45:00.149
-!MESSAGE debugServerDir=C:/ti/ccs920/ccs/ccs_base/DebugServer
-
-!ENTRY org.eclipse.launchbar.core 2 0 2019-11-26 08:45:17.080
-!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
-
-!ENTRY org.eclipse.launchbar.core 2 0 2019-11-26 08:45:17.103
-!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
-
-!ENTRY org.eclipse.launchbar.core 2 0 2019-11-26 08:45:17.119
-!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
-
-!ENTRY com.ti.ccstudio.ui 1 0 2019-11-26 08:45:17.207
-!MESSAGE CCS IDE session started!
-	CCS build: 9.2.0.00013
-	CCS location: C:/ti/ccs920/ccs
-	Workspace location: C:/Users/arrooney/ws_arrooney
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-26 08:45:17.416
-!MESSAGE constructor
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-26 08:45:17.424
-!MESSAGE done with directories
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-26 08:45:17.429
-!MESSAGE loading ti_logger
-
-!ENTRY com.ti.ccstudio.debug.server 4 214294189 2019-11-26 08:45:17.437
-!MESSAGE Unexpected CCS exit detected [11/23/19 1:02 PM]!!!
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-26 08:45:17.447
-!MESSAGE Platform os: win32
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-26 08:45:17.459
-!MESSAGE loading cToolsIF
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-26 08:45:17.490
-!MESSAGE loading cTools
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-26 08:45:17.575
-!MESSAGE loading TraceFactory
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-26 08:45:17.598
-!MESSAGE loading sqlite3
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-26 08:45:17.623
-!MESSAGE loading CloudTrace
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-26 08:45:17.697
-!MESSAGE CloudTrace interface loaded
-
-!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2019-11-26 08:45:17.762
-!MESSAGE CCS HTTP adapter started! [ccs.port:51875] - Open 'http://localhost:51875/ide' in web browser to see listing of available APIs...
-
-!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2019-11-26 08:45:36.724
-!MESSAGE No repository found at file:/C:/Users/arrooney/AppData/Local/Temp/ccs_618e5e7f-76f0-4fa8-7d80-8db2541f2667/INSTALLER.
-
-!ENTRY com.ti.ccstudio.project.core 2 0 2019-11-26 08:58:53.512
-!MESSAGE Unrecognized option setting '--elf' for tool 'com.ti.ccstudio.buildDefinitions.TMS470_18.12.exe.compilerDebug.534049442'
-
-!ENTRY com.ti.ccstudio.project.core 2 0 2019-11-26 08:59:12.979
-!MESSAGE Unrecognized option setting '--elf' for tool 'com.ti.ccstudio.buildDefinitions.TMS470_18.12.exe.compilerDebug.1963397231'
-
-!ENTRY org.eclipse.ui 2 2 2019-11-26 09:05:48.028
+!ENTRY org.eclipse.ui 2 2 2020-01-15 20:01:24.649
 !MESSAGE com.ti.ccstudio.system.setup.ui.views.TargetConfigurationView: Deprecated relationship "fast" should be converted to "stack".
 
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-26 09:17:55.273
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
+!ENTRY org.eclipse.core.jobs 4 2 2020-01-15 20:28:13.356
+!MESSAGE Unhandled error
+!STACK 0
+org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4552)
+	at org.eclipse.swt.SWT.error(SWT.java:4467)
+	at org.eclipse.swt.SWT.error(SWT.java:4438)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1182)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:678)
+	at org.eclipse.jface.operation.AccumulatingProgressMonitor.done(AccumulatingProgressMonitor.java:180)
+	at java.lang.Iterable.forEach(Unknown Source)
+	at java.util.Collections$UnmodifiableCollection.forEach(Unknown Source)
+	at org.eclipse.ui.internal.progress.ProgressManager$JobMonitor.done(ProgressManager.java:264)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:73)
 
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-26 09:17:55.287
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-26 09:17:55.485
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-26 09:17:55.503
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-26 09:17:57.083
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-26 09:17:57.123
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-26 09:31:14.276
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-26 09:31:14.291
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-26 09:31:14.467
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-26 09:31:14.481
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-26 09:31:18.678
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-26 09:32:03.222
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-26 09:32:03.436
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-26 09:32:03.451
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-26 09:32:03.478
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-26 09:32:03.535
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-26 09:32:11.783
-!MESSAGE DS_ERROR: Warning:
-A firmware update is required for the debug probe. Click the "Update" button to update the firmware and connect to the debug target.
-DO NOT UNPLUG THE DEBUG PROBE DURING THE UPDATE.
-(Emulation package 8.3.0.00003)
-
-!SESSION 2019-11-26 13:52:34.526 -----------------------------------------------
+!ENTRY org.eclipse.core.jobs 2 2 2020-01-15 20:28:13.771
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.ti.ccstudio.debug.internal.ui.ProgressManager$DSJob
+!SESSION 2020-01-15 20:31:34.726 -----------------------------------------------
 eclipse.buildId=4.8.0.I20180611-0500
 java.version=1.8.0_144
 java.vendor=Oracle Corporation
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Framework arguments:  -product com.ti.ccstudio.branding.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+Framework arguments:  -product com.ti.ccstudio.branding.product -product com.ti.ccstudio.branding.product -product com.ti.ccstudio.branding.product -product com.ti.ccstudio.branding.product -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product -product com.ti.ccstudio.branding.product -product com.ti.ccstudio.branding.product -product com.ti.ccstudio.branding.product -data C:\Users\arrooney\RTOSSanity -product com.ti.ccstudio.branding.product
 
-!ENTRY org.eclipse.core.resources 2 10035 2019-11-26 13:52:36.932
-!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
-
-!ENTRY com.ti.common.core 1 0 2019-11-26 13:52:36.979
+!ENTRY com.ti.common.core 1 0 2020-01-15 20:31:35.730
 !MESSAGE path=ccs_base/DebugServer
 
-!ENTRY com.ti.common.core 1 0 2019-11-26 13:52:36.983
+!ENTRY com.ti.common.core 1 0 2020-01-15 20:31:35.736
 !MESSAGE debugServerDir=C:/ti/ccs920/ccs/ccs_base/DebugServer
 
-!ENTRY org.eclipse.launchbar.core 2 0 2019-11-26 13:52:40.893
+!ENTRY org.eclipse.launchbar.core 2 0 2020-01-15 20:31:41.518
 !MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
 
-!ENTRY org.eclipse.launchbar.core 2 0 2019-11-26 13:52:40.909
+!ENTRY org.eclipse.launchbar.core 2 0 2020-01-15 20:31:41.548
 !MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
 
-!ENTRY org.eclipse.launchbar.core 2 0 2019-11-26 13:52:40.947
+!ENTRY org.eclipse.launchbar.core 2 0 2020-01-15 20:31:41.577
 !MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
 
-!ENTRY com.ti.ccstudio.ui 1 0 2019-11-26 13:52:42.559
+!ENTRY com.ti.ccstudio.ui 1 0 2020-01-15 20:31:41.627
 !MESSAGE CCS IDE session started!
 	CCS build: 9.2.0.00013
 	CCS location: C:/ti/ccs920/ccs
-	Workspace location: C:/Users/arrooney/ws_arrooney
+	Workspace location: C:/Users/arrooney/RTOSSanity
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-26 13:52:42.672
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-15 20:31:41.768
 !MESSAGE constructor
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-26 13:52:42.678
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-15 20:31:41.783
 !MESSAGE done with directories
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-26 13:52:42.684
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-15 20:31:41.801
 !MESSAGE loading ti_logger
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-26 13:52:42.689
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-15 20:31:41.811
 !MESSAGE Platform os: win32
 
-!ENTRY com.ti.ccstudio.debug.server 4 214294189 2019-11-26 13:52:42.694
-!MESSAGE Unexpected CCS exit detected [11/23/19 1:02 PM]!!!
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-26 13:52:42.701
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-15 20:31:41.823
 !MESSAGE loading cToolsIF
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-26 13:52:42.707
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-15 20:31:41.832
 !MESSAGE loading cTools
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-26 13:52:42.713
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-15 20:31:41.845
 !MESSAGE loading TraceFactory
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-26 13:52:42.719
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-15 20:31:41.872
 !MESSAGE loading sqlite3
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-26 13:52:42.725
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-15 20:31:41.881
 !MESSAGE loading CloudTrace
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2019-11-26 13:52:42.735
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-15 20:31:41.899
 !MESSAGE CloudTrace interface loaded
 
-!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2019-11-26 13:52:42.783
-!MESSAGE CCS HTTP adapter started! [ccs.port:54133] - Open 'http://localhost:54133/ide' in web browser to see listing of available APIs...
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2020-01-15 20:31:41.965
+!MESSAGE CCS HTTP adapter started! [ccs.port:58121] - Open 'http://localhost:58121/ide' in web browser to see listing of available APIs...
 
-!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2019-11-26 13:53:00.673
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2020-01-15 20:31:56.937
 !MESSAGE No repository found at file:/C:/Users/arrooney/AppData/Local/Temp/ccs_618e5e7f-76f0-4fa8-7d80-8db2541f2667/INSTALLER.
 
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-26 13:53:59.083
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-26 13:53:59.098
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-26 13:53:59.283
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-26 13:53:59.303
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-26 13:54:01.720
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:15:28.360
-!MESSAGE DS_ERROR: Dap: Error: (Error -242 @ 0x0) A router subpath could not be accessed. The board configuration file is probably incorrect. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:15:29.703
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -2063 @ 0x0) Unable to reset device. Power-cycle the board. If error persists, confirm configuration and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:15:29.732
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:15:30.170
-!MESSAGE DS_ERROR: CortexR4: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:15:30.175
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:06.712
-!MESSAGE DS_ERROR: Dap: Error: (Error -242 @ 0x0) A router subpath could not be accessed. The board configuration file is probably incorrect. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.110
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -2063 @ 0x0) Unable to reset device. Power-cycle the board. If error persists, confirm configuration and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.139
-!MESSAGE DS_ERROR: CortexR4: Trouble Halting Target CPU: (Error -2064 @ 0x0) Unable to read device status. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.167
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.195
-!MESSAGE DS_ERROR: CortexR4: Trouble Halting Target CPU: (Error -2064 @ 0x0) Unable to read device status. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.224
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.253
-!MESSAGE DS_ERROR: CortexR4: Trouble Halting Target CPU: (Error -2064 @ 0x0) Unable to read device status. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.282
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.310
-!MESSAGE DS_ERROR: CortexR4: Trouble Halting Target CPU: (Error -2064 @ 0x0) Unable to read device status. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.338
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.368
-!MESSAGE DS_ERROR: CortexR4: Trouble Halting Target CPU: (Error -2064 @ 0x0) Unable to read device status. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.397
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.425
-!MESSAGE DS_ERROR: CortexR4: Trouble Halting Target CPU: (Error -2064 @ 0x0) Unable to read device status. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.454
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.482
-!MESSAGE DS_ERROR: CortexR4: Trouble Halting Target CPU: (Error -2064 @ 0x0) Unable to read device status. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.511
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.539
-!MESSAGE DS_ERROR: CortexR4: Trouble Halting Target CPU: (Error -2064 @ 0x0) Unable to read device status. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.567
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.596
-!MESSAGE DS_ERROR: CortexR4: Trouble Halting Target CPU: (Error -2064 @ 0x0) Unable to read device status. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.626
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.654
-!MESSAGE DS_ERROR: CortexR4: Trouble Halting Target CPU: (Error -2064 @ 0x0) Unable to read device status. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.683
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.711
-!MESSAGE DS_ERROR: CortexR4: Trouble Halting Target CPU: (Error -2064 @ 0x0) Unable to read device status. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.740
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.769
-!MESSAGE DS_ERROR: CortexR4: Trouble Halting Target CPU: (Error -2064 @ 0x0) Unable to read device status. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.798
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.826
-!MESSAGE DS_ERROR: CortexR4: Trouble Halting Target CPU: (Error -2064 @ 0x0) Unable to read device status. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.855
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.884
-!MESSAGE DS_ERROR: CortexR4: Trouble Halting Target CPU: (Error -2064 @ 0x0) Unable to read device status. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.913
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.941
-!MESSAGE DS_ERROR: CortexR4: Trouble Halting Target CPU: (Error -2064 @ 0x0) Unable to read device status. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.969
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:07.998
-!MESSAGE DS_ERROR: CortexR4: Trouble Halting Target CPU: (Error -2064 @ 0x0) Unable to read device status. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:08.027
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:08.055
-!MESSAGE DS_ERROR: CortexR4: Trouble Halting Target CPU: (Error -2064 @ 0x0) Unable to read device status. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:08.084
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:08.112
-!MESSAGE DS_ERROR: CortexR4: Trouble Halting Target CPU: (Error -2064 @ 0x0) Unable to read device status. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:08.142
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:08.171
-!MESSAGE DS_ERROR: CortexR4: Trouble Halting Target CPU: (Error -2064 @ 0x0) Unable to read device status. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:08.201
-!MESSAGE DS_ERROR: CortexR4: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:16:08.206
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:17:58.496
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:17:58.512
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:17:58.689
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:17:58.704
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:17:58.730
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:17:58.771
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:19:25.464
-!MESSAGE DS_ERROR: Dap: Error: (Error -242 @ 0x0) A router subpath could not be accessed. The board configuration file is probably incorrect. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:19:29.427
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -2063 @ 0x0) Unable to reset device. Power-cycle the board. If error persists, confirm configuration and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:19:29.457
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:19:29.892
-!MESSAGE DS_ERROR: CortexR4: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:19:29.898
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:25.479
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_BP_ADDR6: (Error -1064 @ 0x6403002C) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:25.487
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_BP_ADDR7: (Error -1064 @ 0x6403002E) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:26.435
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_BP_ADDR14: (Error -1064 @ 0x6403003C) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:26.456
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_BP_ADDR15: (Error -1064 @ 0x6403003E) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:26.520
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_BP_CNTL6: (Error -1064 @ 0x6403002D) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:26.526
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_BP_CNTL7: (Error -1064 @ 0x6403002F) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:26.824
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_BP_CNTL14: (Error -1064 @ 0x6403003D) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:26.831
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_BP_CNTL15: (Error -1064 @ 0x6403003F) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:26.850
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR2: (Error -1064 @ 0x64030044) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:26.858
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR3: (Error -1064 @ 0x64030046) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:26.882
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR4: (Error -1064 @ 0x64030048) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:26.889
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR5: (Error -1064 @ 0x6403004A) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:26.896
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR6: (Error -1064 @ 0x6403004C) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:26.912
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR7: (Error -1064 @ 0x6403004E) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:27.149
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR10: (Error -1064 @ 0x64030054) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:27.156
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR11: (Error -1064 @ 0x64030056) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:27.162
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR12: (Error -1064 @ 0x64030058) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:27.175
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR13: (Error -1064 @ 0x6403005A) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:27.181
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR14: (Error -1064 @ 0x6403005C) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:27.189
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR15: (Error -1064 @ 0x6403005E) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:27.202
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL2: (Error -1064 @ 0x64030045) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:27.222
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL3: (Error -1064 @ 0x64030047) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:27.228
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL4: (Error -1064 @ 0x64030049) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:27.235
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL5: (Error -1064 @ 0x6403004B) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:27.242
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL6: (Error -1064 @ 0x6403004D) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:27.249
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL7: (Error -1064 @ 0x6403004F) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:27.444
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL10: (Error -1064 @ 0x64030055) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:27.451
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL11: (Error -1064 @ 0x64030057) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:27.465
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL12: (Error -1064 @ 0x64030059) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:27.472
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL13: (Error -1064 @ 0x6403005B) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:27.479
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL14: (Error -1064 @ 0x6403005D) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:27.488
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL15: (Error -1064 @ 0x6403005F) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:34.669
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register System_Registers.CP15_NOP: (Error -1064 @ 0x20074F80) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:34.683
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register System_Registers.CP15_INVALIDATE_ENTIRE_ICACHE: (Error -1064 @ 0x20074F05) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:34.689
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register System_Registers.CP15_ICACHE_INVALIDATE_ALL_TO_POU: (Error -1064 @ 0x20072F25) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:34.696
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register System_Registers.CP15_ICACHE_FLUSH_PREFETCH_BUFFER: (Error -1064 @ 0x20074F85) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:34.717
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register System_Registers.CP15_ICACHE_INVALIDATE_ENTIRE_BPA: (Error -1064 @ 0x20074FC5) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:34.724
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register System_Registers.CP15_ICACHE_INVALIDATE_ADDRESS_FROM_BPA: (Error -1064 @ 0x20072FE5) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:34.730
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register System_Registers.CP15_DCACHE_INVALIDATE_LINE_BY_PHYSICAL_ADDRESS: (Error -1064 @ 0x20072F26) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:34.737
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register System_Registers.CP15_DCACHE_INVALIDATE_LINE_BY_SETWAY: (Error -1064 @ 0x20072F46) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:34.743
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register System_Registers.CP15_DCACHE_CLEAN_LINE_BY_PHYSICAL_ADDRESS: (Error -1064 @ 0x20072F2A) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:34.750
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register System_Registers.CP15_DCACHE_CLEAN_LINE_BY_SETWAY: (Error -1064 @ 0x20072F4A) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:34.768
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register System_Registers.CP15_DATA_SYNCHRONIZATION_BARRIER: (Error -1064 @ 0x20074F8A) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:34.775
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register System_Registers.CP15_DATA_MEMORY_BARRIER: (Error -1064 @ 0x20074FAA) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:34.782
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register System_Registers.CP15_DCACHE_CLEAN_BYPATOPOU: (Error -1064 @ 0x20074F2B) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:34.975
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register System_Registers.CP15_DCACHE_CLEAN_INVALIDATE_LINE_BYPATOPOU: (Error -1064 @ 0x20072F2E) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:34.981
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register System_Registers.CP15_DCACHE_CLEAN_INVALIDATE_LINE_BY_SETWAY: (Error -1064 @ 0x20072F4E) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:35.406
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register System_Registers.CP15_INVALIDATE_ALL_DATA_CACHE: (Error -1064 @ 0x200F2F05) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:21:35.431
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register System_Registers.CP15_CACHE_SIZE_OVERRIDE: (Error -1064 @ 0x200F2F0E) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:53.882
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_BP_ADDR6: (Error -1064 @ 0x6403002C) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:53.958
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_BP_ADDR7: (Error -1064 @ 0x6403002E) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:53.975
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_BP_ADDR14: (Error -1064 @ 0x6403003C) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:53.981
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_BP_ADDR15: (Error -1064 @ 0x6403003E) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:53.995
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_BP_CNTL6: (Error -1064 @ 0x6403002D) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.001
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_BP_CNTL7: (Error -1064 @ 0x6403002F) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.015
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_BP_CNTL14: (Error -1064 @ 0x6403003D) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.021
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_BP_CNTL15: (Error -1064 @ 0x6403003F) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.030
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR2: (Error -1064 @ 0x64030044) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.036
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR3: (Error -1064 @ 0x64030046) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.042
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR4: (Error -1064 @ 0x64030048) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.048
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR5: (Error -1064 @ 0x6403004A) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.054
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR6: (Error -1064 @ 0x6403004C) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.059
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR7: (Error -1064 @ 0x6403004E) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.068
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR10: (Error -1064 @ 0x64030054) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.074
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR11: (Error -1064 @ 0x64030056) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.079
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR12: (Error -1064 @ 0x64030058) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.085
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR13: (Error -1064 @ 0x6403005A) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.091
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR14: (Error -1064 @ 0x6403005C) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.096
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_ADDR15: (Error -1064 @ 0x6403005E) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.105
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL2: (Error -1064 @ 0x64030045) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.111
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL3: (Error -1064 @ 0x64030047) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.117
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL4: (Error -1064 @ 0x64030049) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.123
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL5: (Error -1064 @ 0x6403004B) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.128
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL6: (Error -1064 @ 0x6403004D) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.134
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL7: (Error -1064 @ 0x6403004F) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.143
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL10: (Error -1064 @ 0x64030055) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.149
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL11: (Error -1064 @ 0x64030057) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.156
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL12: (Error -1064 @ 0x64030059) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.162
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL13: (Error -1064 @ 0x6403005B) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.168
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL14: (Error -1064 @ 0x6403005D) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.175
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_WP_CNTL15: (Error -1064 @ 0x6403005F) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.762
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_BP_ADDR6: (Error -1064 @ 0x6403002C) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 12:24:54.767
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Register Debug_Registers.BPWP_BP_ADDR7: (Error -1064 @ 0x6403002E) Attempted to access an unknown or invalid register. Confirm the register is valid and accessible, and retry the operation. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 17:24:27.188
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 17:24:27.203
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 17:24:27.380
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 17:24:27.394
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 17:24:30.645
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2019-11-27 17:24:30.730
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-04 13:09:10.113
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-04 13:09:10.298
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-04 13:09:10.312
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-04 13:09:13.000
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-04 13:09:13.040
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-04 13:44:43.078
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-04 13:44:43.092
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-04 13:44:43.279
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-04 13:44:43.294
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-04 13:44:44.702
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-04 13:44:44.742
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-04 14:03:08.400
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-04 14:03:08.463
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-!SESSION 2020-01-11 13:23:14.994 -----------------------------------------------
-eclipse.buildId=4.8.0.I20180611-0500
-java.version=1.8.0_144
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Framework arguments:  -product com.ti.ccstudio.branding.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
-
-!ENTRY org.eclipse.core.resources 2 10035 2020-01-11 13:25:24.937
-!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
-
-!ENTRY com.ti.common.core 1 0 2020-01-11 13:25:25.115
-!MESSAGE path=ccs_base/DebugServer
-
-!ENTRY com.ti.common.core 1 0 2020-01-11 13:25:25.119
-!MESSAGE debugServerDir=C:/ti/ccs920/ccs/ccs_base/DebugServer
-
-!ENTRY org.eclipse.launchbar.core 2 0 2020-01-11 13:25:33.078
-!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
-
-!ENTRY org.eclipse.launchbar.core 2 0 2020-01-11 13:25:33.091
-!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
-
-!ENTRY org.eclipse.launchbar.core 2 0 2020-01-11 13:25:33.099
-!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
-
-!ENTRY com.ti.ccstudio.ui 1 0 2020-01-11 13:25:43.488
-!MESSAGE CCS IDE session started!
-	CCS build: 9.2.0.00013
-	CCS location: C:/ti/ccs920/ccs
-	Workspace location: C:/Users/arrooney/ws_arrooney
-
-!ENTRY com.ti.ccstudio.debug.server 4 214294189 2020-01-11 13:25:43.653
-!MESSAGE Unexpected CCS exit detected [11/23/19 1:02 PM]!!!
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-11 13:25:43.680
-!MESSAGE constructor
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-11 13:25:43.684
-!MESSAGE done with directories
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-11 13:25:43.689
-!MESSAGE loading ti_logger
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-11 13:25:43.694
-!MESSAGE Platform os: win32
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-11 13:25:43.698
-!MESSAGE loading cToolsIF
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-11 13:25:43.716
-!MESSAGE loading cTools
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-11 13:25:43.737
-!MESSAGE loading TraceFactory
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-11 13:25:43.758
-!MESSAGE loading sqlite3
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-11 13:25:43.778
-!MESSAGE loading CloudTrace
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-11 13:25:43.844
-!MESSAGE CloudTrace interface loaded
-
-!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2020-01-11 13:25:43.916
-!MESSAGE CCS HTTP adapter started! [ccs.port:64767] - Open 'http://localhost:64767/ide' in web browser to see listing of available APIs...
-
-!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2020-01-11 13:26:37.097
-!MESSAGE No repository found at file:/C:/Users/arrooney/AppData/Local/Temp/ccs_618e5e7f-76f0-4fa8-7d80-8db2541f2667/INSTALLER.
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 13:30:57.060
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 13:31:00.049
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 13:31:11.444
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 13:31:15.329
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 13:31:16.393
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 13:31:19.281
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 13:31:40.924
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 13:32:38.707
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 13:32:40.239
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 13:32:45.036
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 13:33:03.617
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-!SESSION 2020-01-11 16:52:05.195 -----------------------------------------------
-eclipse.buildId=4.8.0.I20180611-0500
-java.version=1.8.0_144
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Framework arguments:  -product com.ti.ccstudio.branding.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
-
-!ENTRY org.eclipse.core.resources 2 10035 2020-01-11 16:52:07.912
-!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
-
-!ENTRY com.ti.common.core 1 0 2020-01-11 16:52:07.973
-!MESSAGE path=ccs_base/DebugServer
-
-!ENTRY com.ti.common.core 1 0 2020-01-11 16:52:07.978
-!MESSAGE debugServerDir=C:/ti/ccs920/ccs/ccs_base/DebugServer
-
-!ENTRY org.eclipse.launchbar.core 2 0 2020-01-11 16:52:13.977
-!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
-
-!ENTRY org.eclipse.launchbar.core 2 0 2020-01-11 16:52:14.019
-!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
-
-!ENTRY org.eclipse.launchbar.core 2 0 2020-01-11 16:52:14.034
-!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
-
-!ENTRY com.ti.ccstudio.ui 1 0 2020-01-11 16:52:14.084
-!MESSAGE CCS IDE session started!
-	CCS build: 9.2.0.00013
-	CCS location: C:/ti/ccs920/ccs
-	Workspace location: C:/Users/arrooney/ws_arrooney
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-11 16:52:14.227
-!MESSAGE constructor
-
-!ENTRY com.ti.ccstudio.debug.server 4 214294189 2020-01-11 16:52:14.237
-!MESSAGE Unexpected CCS exit detected [11/23/19 1:02 PM]!!!
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-11 16:52:14.249
-!MESSAGE done with directories
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-11 16:52:14.257
-!MESSAGE loading ti_logger
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-11 16:52:14.263
-!MESSAGE Platform os: win32
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-11 16:52:14.269
-!MESSAGE loading cToolsIF
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-11 16:52:14.275
-!MESSAGE loading cTools
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-11 16:52:14.281
-!MESSAGE loading TraceFactory
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-11 16:52:14.294
-!MESSAGE loading sqlite3
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-11 16:52:14.301
-!MESSAGE loading CloudTrace
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-11 16:52:14.317
-!MESSAGE CloudTrace interface loaded
-
-!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2020-01-11 16:52:14.360
-!MESSAGE CCS HTTP adapter started! [ccs.port:49587] - Open 'http://localhost:49587/ide' in web browser to see listing of available APIs...
-
-!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2020-01-11 16:52:59.570
-!MESSAGE No repository found at file:/C:/Users/arrooney/AppData/Local/Temp/ccs_618e5e7f-76f0-4fa8-7d80-8db2541f2667/INSTALLER.
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 16:57:24.127
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 16:57:25.563
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 16:57:26.890
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 16:57:29.693
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 16:57:50.475
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 16:57:54.562
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 16:58:01.244
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 16:58:16.974
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:00:47.693
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:00:48.930
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2020-01-11 17:04:52.046
-!MESSAGE Request for monitor: '_Application_0_Texas Instruments XDS110 USB Debug Probe/CortexR4_Texas Instruments XDS110 USB Debug Probe/CortexR4_BreakpointManager_Texas Instruments XDS110 USB Debug Probe/CortexR4_BreakpointManager_Breakpoint(98)' resulted in an error.
-!SUBENTRY 1 com.ti.ccstudio.debug 4 10004 2020-01-11 17:04:52.046
+!ENTRY com.ti.ccstudio.debug 1 0 2020-01-15 21:01:22.468
+!MESSAGE DS_ERROR: CortexR4: GEL: File: C:\Users\arrooney\RTOSSanity\RTOSSanity\Debug\RTOSSanity.out Load cancelled by user.
+
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-01-15 21:01:22.474
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@7be7363d): Status ERROR: com.ti.ccstudio.debug code=20003 File: C:\Users\arrooney\RTOSSanity\RTOSSanity\Debug\RTOSSanity.out
+Load cancelled by user. null' resulted in an error.
+!SUBENTRY 1 com.ti.ccstudio.debug 4 20003 2020-01-15 21:01:22.474
+!MESSAGE File: C:\Users\arrooney\RTOSSanity\RTOSSanity\Debug\RTOSSanity.out
+Load cancelled by user.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-01-16 18:20:53.670
+!MESSAGE Request for monitor: '_Application_12_Texas Instruments XDS110 USB Debug Probe/CortexR4_Texas Instruments XDS110 USB Debug Probe/CortexR4_BreakpointManager_Texas Instruments XDS110 USB Debug Probe/CortexR4_BreakpointManager_Breakpoint(1169)' resulted in an error.
+!SUBENTRY 1 com.ti.ccstudio.debug 4 10004 2020-01-16 18:20:53.670
 !MESSAGE Error enabling this function: There is no AET resource to support this job.
 !STACK 0
 com.ti.debug.engine.IBreakpointManager$BreakpointException: Error enabling this function: There is no AET resource to support this job.
@@ -1466,9 +450,9 @@ com.ti.debug.engine.IBreakpointManager$BreakpointException: Error enabling this 
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 
-!ENTRY org.eclipse.cdt.dsf 4 10005 2020-01-11 17:07:05.406
-!MESSAGE Request for monitor: '_Application_1_Texas Instruments XDS110 USB Debug Probe/CortexR4_Texas Instruments XDS110 USB Debug Probe/CortexR4_BreakpointManager_Texas Instruments XDS110 USB Debug Probe/CortexR4_BreakpointManager_Breakpoint(184)' resulted in an error.
-!SUBENTRY 1 com.ti.ccstudio.debug 4 10004 2020-01-11 17:07:05.406
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-01-16 18:33:59.791
+!MESSAGE Request for monitor: '_Application_12_Texas Instruments XDS110 USB Debug Probe/CortexR4_Texas Instruments XDS110 USB Debug Probe/CortexR4_BreakpointManager_Texas Instruments XDS110 USB Debug Probe/CortexR4_BreakpointManager_Breakpoint(1204)' resulted in an error.
+!SUBENTRY 1 com.ti.ccstudio.debug 4 10004 2020-01-16 18:33:59.791
 !MESSAGE Error enabling this function: There is no AET resource to support this job.
 !STACK 0
 com.ti.debug.engine.IBreakpointManager$BreakpointException: Error enabling this function: There is no AET resource to support this job.
@@ -1488,210 +472,63 @@ com.ti.debug.engine.IBreakpointManager$BreakpointException: Error enabling this 
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:11:45.310
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:11:45.326
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:11:45.545
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:11:45.560
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:11:49.824
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:11:49.962
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:12:48.107
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:12:48.124
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:12:48.300
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:12:48.315
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:12:50.774
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:12:50.911
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:13:58.963
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Memory Block at 0xfffff500 on Page 0 of Length 0x4: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:13:58.979
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Memory Block at 0xfffff504 on Page 0 of Length 0x4: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:13:58.994
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Memory Block at 0xfffff508 on Page 0 of Length 0x4: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:13:59.008
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Memory Block at 0xfffff50c on Page 0 of Length 0x4: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:13:59.023
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Memory Block at 0xfffff510 on Page 0 of Length 0x4: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:13:59.037
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Memory Block at 0xfffff514 on Page 0 of Length 0x4: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:13:59.051
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Memory Block at 0xfffff518 on Page 0 of Length 0x4: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:13:59.066
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Memory Block at 0xfffff51c on Page 0 of Length 0x4: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:13:59.080
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Memory Block at 0xfffff520 on Page 0 of Length 0x4: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:13:59.094
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Memory Block at 0xfffff524 on Page 0 of Length 0x4: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:13:59.108
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Memory Block at 0xfffff528 on Page 0 of Length 0x4: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:13:59.122
-!MESSAGE DS_ERROR: CortexR4: Trouble Reading Memory Block at 0xfffff52c on Page 0 of Length 0x4: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:13:59.341
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:13:59.521
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:13:59.535
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:14:04.137
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:22:18.011
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:22:18.191
-!MESSAGE DS_ERROR: IcePick: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:22:18.206
-!MESSAGE DS_ERROR: IcePick: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:22:18.384
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:22:18.584
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:22:18.598
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:22:20.161
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:22:20.298
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:23:34.921
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:41:56.326
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:41:56.346
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:41:56.531
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:41:56.545
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:41:58.502
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 17:41:58.644
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 18:10:50.951
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 18:10:51.134
-!MESSAGE DS_ERROR: IcePick: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 18:10:51.149
-!MESSAGE DS_ERROR: IcePick: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 18:10:51.275
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 18:10:51.453
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 18:10:51.477
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 18:10:51.620
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-11 18:10:51.659
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-!SESSION 2020-01-12 14:01:58.150 -----------------------------------------------
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-01-16 18:34:00.275
+!MESSAGE Request for monitor: '_Application_12_Texas Instruments XDS110 USB Debug Probe/CortexR4_Texas Instruments XDS110 USB Debug Probe/CortexR4_BreakpointManager_Texas Instruments XDS110 USB Debug Probe/CortexR4_BreakpointManager_Breakpoint(1207)' resulted in an error.
+!SUBENTRY 1 com.ti.ccstudio.debug 4 10004 2020-01-16 18:34:00.275
+!MESSAGE Error enabling this function: There is no AET resource to support this job.
+!STACK 0
+com.ti.debug.engine.IBreakpointManager$BreakpointException: Error enabling this function: There is no AET resource to support this job.
+	at com.ti.debug.engine.impl.BreakpointManager.checkForException(BreakpointManager.java:60)
+	at com.ti.debug.engine.impl.BreakpointManager.enable(BreakpointManager.java:115)
+	at com.ti.ccstudio.debug.service.contexts.BreakpointManagerDMContext.dsEnabled(BreakpointManagerDMContext.java:720)
+	at com.ti.ccstudio.debug.service.contexts.BreakpointManagerDMContext.insertBreakpoint(BreakpointManagerDMContext.java:351)
+	at com.ti.ccstudio.debug.service.contexts.BreakpointManagerDMContext.insertBreakpoint(BreakpointManagerDMContext.java:315)
+	at com.ti.ccstudio.debug.service.BreakpointService.insertBreakpoint(BreakpointService.java:474)
+	at com.ti.ccstudio.debug.service.BreakpointService$8$1.handleCompleted(BreakpointService.java:597)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.ui 4 0 2020-01-16 18:45:21.711
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: assertion failed: 
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:110)
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:96)
+	at org.eclipse.debug.internal.ui.viewers.model.ViewerStateTracker.restorePendingStateNode(ViewerStateTracker.java:1266)
+	at org.eclipse.debug.internal.ui.viewers.model.ViewerStateTracker.compareFinished(ViewerStateTracker.java:1524)
+	at org.eclipse.debug.internal.ui.viewers.model.ElementCompareRequest$1.run(ElementCompareRequest.java:82)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:37)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3906)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3537)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1170)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1059)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:667)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:597)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:656)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:592)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1498)
+!SESSION 2020-01-17 18:43:01.979 -----------------------------------------------
 eclipse.buildId=4.8.0.I20180611-0500
 java.version=1.8.0_144
 java.vendor=Oracle Corporation
@@ -1699,104 +536,80 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
 Framework arguments:  -product com.ti.ccstudio.branding.product
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
 
-!ENTRY org.eclipse.core.resources 2 10035 2020-01-12 14:02:03.385
+!ENTRY org.eclipse.core.resources 2 10035 2020-01-17 18:43:07.593
 !MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
 
-!ENTRY com.ti.common.core 1 0 2020-01-12 14:02:03.542
+!ENTRY com.ti.common.core 1 0 2020-01-17 18:43:07.749
 !MESSAGE path=ccs_base/DebugServer
 
-!ENTRY com.ti.common.core 1 0 2020-01-12 14:02:03.547
+!ENTRY com.ti.common.core 1 0 2020-01-17 18:43:07.749
 !MESSAGE debugServerDir=C:/ti/ccs920/ccs/ccs_base/DebugServer
 
-!ENTRY org.eclipse.launchbar.core 2 0 2020-01-12 14:02:10.738
+!ENTRY org.eclipse.launchbar.core 2 0 2020-01-17 18:43:27.046
 !MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
 
-!ENTRY org.eclipse.launchbar.core 2 0 2020-01-12 14:02:10.756
+!ENTRY org.eclipse.launchbar.core 2 0 2020-01-17 18:43:27.062
 !MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
 
-!ENTRY org.eclipse.launchbar.core 2 0 2020-01-12 14:02:10.772
+!ENTRY org.eclipse.launchbar.core 2 0 2020-01-17 18:43:27.078
 !MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
 
-!ENTRY com.ti.ccstudio.ui 1 0 2020-01-12 14:02:20.760
+!ENTRY com.ti.ccstudio.ui 1 0 2020-01-17 18:43:27.178
 !MESSAGE CCS IDE session started!
 	CCS build: 9.2.0.00013
 	CCS location: C:/ti/ccs920/ccs
-	Workspace location: C:/Users/arrooney/ws_arrooney
+	Workspace location: C:/Users/arrooney/RTOSSanity
 
-!ENTRY com.ti.ccstudio.debug.server 4 214294189 2020-01-12 14:02:20.906
-!MESSAGE Unexpected CCS exit detected [11/23/19 1:02 PM]!!!
-
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-12 14:02:20.916
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-17 18:43:27.410
 !MESSAGE constructor
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-12 14:02:20.921
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-17 18:43:27.416
 !MESSAGE done with directories
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-12 14:02:20.928
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-17 18:43:27.416
 !MESSAGE loading ti_logger
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-12 14:02:20.933
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-17 18:43:27.432
 !MESSAGE Platform os: win32
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-12 14:02:20.938
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-17 18:43:27.448
 !MESSAGE loading cToolsIF
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-12 14:02:20.956
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-17 18:43:27.479
 !MESSAGE loading cTools
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-12 14:02:20.978
+!ENTRY com.ti.ccstudio.debug.server 4 214294189 2020-01-17 18:43:27.495
+!MESSAGE Unexpected CCS exit detected [1/15/20 8:31 PM]!!!
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-17 18:43:27.517
 !MESSAGE loading TraceFactory
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-12 14:02:20.998
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-17 18:43:27.537
 !MESSAGE loading sqlite3
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-12 14:02:21.015
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-17 18:43:27.563
 !MESSAGE loading CloudTrace
 
-!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-12 14:02:21.071
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-17 18:43:27.647
 !MESSAGE CloudTrace interface loaded
 
-!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2020-01-12 14:02:21.128
-!MESSAGE CCS HTTP adapter started! [ccs.port:57629] - Open 'http://localhost:57629/ide' in web browser to see listing of available APIs...
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2020-01-17 18:43:27.710
+!MESSAGE CCS HTTP adapter started! [ccs.port:59487] - Open 'http://localhost:59487/ide' in web browser to see listing of available APIs...
 
-!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2020-01-12 14:02:50.002
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2020-01-17 18:43:55.926
 !MESSAGE No repository found at file:/C:/Users/arrooney/AppData/Local/Temp/ccs_618e5e7f-76f0-4fa8-7d80-8db2541f2667/INSTALLER.
 
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 14:14:53.372
+!ENTRY com.ti.ccstudio.debug 1 0 2020-01-20 19:40:23.186
 !MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
 
 
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 14:14:57.206
+!ENTRY com.ti.ccstudio.debug 1 0 2020-01-20 19:40:25.182
 !MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
 
 
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 14:15:00.762
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 14:15:15.857
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 14:15:16.958
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 14:15:20.245
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 14:15:21.590
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 14:15:58.249
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2020-01-12 14:16:03.731
-!MESSAGE Request for monitor: '_Application_0_Texas Instruments XDS110 USB Debug Probe/CortexR4_Texas Instruments XDS110 USB Debug Probe/CortexR4_BreakpointManager_Texas Instruments XDS110 USB Debug Probe/CortexR4_BreakpointManager_Breakpoint(91)' resulted in an error.
-!SUBENTRY 1 com.ti.ccstudio.debug 4 10004 2020-01-12 14:16:03.731
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-01-20 19:46:18.362
+!MESSAGE Request for monitor: '_Application_2_Texas Instruments XDS110 USB Debug Probe/CortexR4_Texas Instruments XDS110 USB Debug Probe/CortexR4_BreakpointManager_Texas Instruments XDS110 USB Debug Probe/CortexR4_BreakpointManager_Breakpoint(426)' resulted in an error.
+!SUBENTRY 1 com.ti.ccstudio.debug 4 10004 2020-01-20 19:46:18.362
 !MESSAGE Error enabling this function: There is no AET resource to support this job.
 !STACK 0
 com.ti.debug.engine.IBreakpointManager$BreakpointException: Error enabling this function: There is no AET resource to support this job.
@@ -1816,255 +629,29 @@ com.ti.debug.engine.IBreakpointManager$BreakpointException: Error enabling this 
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 14:16:08.477
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 14:16:16.018
-!MESSAGE DS_ERROR: CortexR4: Breakpoint Manager: Error enabling this function: There is no AET resource to support this job.
-
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2020-01-12 14:30:51.653
-!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyBackendDsf$12@67d0339b): Status ERROR: org.eclipse.cdt.dsf.ui code=10004  null' resulted in an error.
-!SUBENTRY 1 org.eclipse.cdt.dsf.ui 4 10004 2020-01-12 14:30:51.653
-!MESSAGE 
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 14:35:45.155
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 14:35:45.253
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 14:38:52.956
-!MESSAGE DS_ERROR: CortexR4: Can't Run Target CPU: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 14:38:52.983
-!MESSAGE DS_ERROR: CortexR4: Trouble Halting Target CPU: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 14:38:53.003
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 14:38:53.380
-!MESSAGE DS_ERROR: CortexR4: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 14:38:53.395
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 14:39:13.315
-!MESSAGE DS_ERROR: CortexR4: File Loader: Memory write failed: Could not read 0x080008B8: target is not connected
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 14:39:13.323
-!MESSAGE DS_ERROR: CortexR4: GEL: File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out: Load failed.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 14:45:12.228
-!MESSAGE DS_ERROR: CortexR4: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 14:45:12.630
-!MESSAGE DS_ERROR: CortexR4: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 14:45:12.646
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY org.eclipse.help.base 2 0 2020-01-12 14:52:19.018
-!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.cdt.doc.user_5.4.0.201806170908 [243]'. The index should be rebuilt with Lucene 7.0.0
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:02:55.176
-!MESSAGE DS_ERROR: CortexR4: GEL: File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out Load cancelled by user.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:06:40.102
-!MESSAGE DS_ERROR: CortexR4: GEL: File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out Load cancelled by user.
-
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2020-01-12 15:06:40.112
-!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@2091359a): Status ERROR: com.ti.ccstudio.debug code=20003 File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out
-Load cancelled by user. null' resulted in an error.
-!SUBENTRY 1 com.ti.ccstudio.debug 4 20003 2020-01-12 15:06:40.112
-!MESSAGE File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out
-Load cancelled by user.
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:06:42.014
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:06:42.028
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:06:42.203
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:06:42.218
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:06:45.652
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:08:40.309
-!MESSAGE DS_ERROR: CortexR4: GEL: File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out Load cancelled by user.
-
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2020-01-12 15:08:40.314
-!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@36e639c): Status ERROR: com.ti.ccstudio.debug code=20003 File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out
-Load cancelled by user. null' resulted in an error.
-!SUBENTRY 1 com.ti.ccstudio.debug 4 20003 2020-01-12 15:08:40.314
-!MESSAGE File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out
-Load cancelled by user.
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:08:49.042
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:08:49.223
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:08:49.241
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:08:50.886
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:08:51.025
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:10:31.124
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:10:31.172
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:14:58.282
-!MESSAGE DS_ERROR: CortexR4: GEL: File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out Load cancelled by user.
-
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2020-01-12 15:14:58.288
-!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@651bb61): Status ERROR: com.ti.ccstudio.debug code=20003 File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out
-Load cancelled by user. null' resulted in an error.
-!SUBENTRY 1 com.ti.ccstudio.debug 4 20003 2020-01-12 15:14:58.288
-!MESSAGE File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out
-Load cancelled by user.
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:15:00.246
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:15:00.433
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:15:00.448
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:15:03.841
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:15:50.799
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:15:50.976
-!MESSAGE DS_ERROR: IcePick: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:15:50.990
-!MESSAGE DS_ERROR: IcePick: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:15:51.044
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:15:51.226
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:15:51.242
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:15:54.206
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:28:30.494
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:28:30.509
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:28:30.687
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:28:30.702
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:28:31.304
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:28:31.342
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:47:58.319
-!MESSAGE DS_ERROR: CortexR4: GEL: File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out Load cancelled by user.
-
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2020-01-12 15:47:58.324
-!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@28154435): Status ERROR: com.ti.ccstudio.debug code=20003 File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out
-Load cancelled by user. null' resulted in an error.
-!SUBENTRY 1 com.ti.ccstudio.debug 4 20003 2020-01-12 15:47:58.324
-!MESSAGE File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out
-Load cancelled by user.
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:48:01.812
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:48:01.832
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:48:02.008
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:48:02.023
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:48:03.874
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY org.eclipse.core.jobs 4 2 2020-01-12 15:50:44.125
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-01-20 19:46:46.585
+!MESSAGE Request for monitor: '_Application_2_Texas Instruments XDS110 USB Debug Probe/CortexR4_Texas Instruments XDS110 USB Debug Probe/CortexR4_BreakpointManager_Texas Instruments XDS110 USB Debug Probe/CortexR4_BreakpointManager_Breakpoint(429)' resulted in an error.
+!SUBENTRY 1 com.ti.ccstudio.debug 4 10004 2020-01-20 19:46:46.585
+!MESSAGE Error enabling this function: There is no AET resource to support this job.
+!STACK 0
+com.ti.debug.engine.IBreakpointManager$BreakpointException: Error enabling this function: There is no AET resource to support this job.
+	at com.ti.debug.engine.impl.BreakpointManager.checkForException(BreakpointManager.java:60)
+	at com.ti.debug.engine.impl.BreakpointManager.enable(BreakpointManager.java:115)
+	at com.ti.ccstudio.debug.service.contexts.BreakpointManagerDMContext.dsEnabled(BreakpointManagerDMContext.java:720)
+	at com.ti.ccstudio.debug.service.contexts.BreakpointManagerDMContext.insertBreakpoint(BreakpointManagerDMContext.java:351)
+	at com.ti.ccstudio.debug.service.contexts.BreakpointManagerDMContext.insertBreakpoint(BreakpointManagerDMContext.java:315)
+	at com.ti.ccstudio.debug.service.BreakpointService.insertBreakpoint(BreakpointService.java:474)
+	at com.ti.ccstudio.debug.service.BreakpointService$8$1.handleCompleted(BreakpointService.java:597)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.core.jobs 4 2 2020-01-20 21:02:23.160
 !MESSAGE An internal error occurred during: "Computing hover expression".
 !STACK 0
 java.lang.NullPointerException
@@ -2074,331 +661,77 @@ java.lang.NullPointerException
 	at org.eclipse.cdt.internal.ui.editor.ASTProvider.runOnAST(ASTProvider.java:336)
 	at org.eclipse.cdt.ui.text.SharedASTJob.run(SharedASTJob.java:71)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+!SESSION 2020-01-20 21:21:47.206 -----------------------------------------------
+eclipse.buildId=4.8.0.I20180611-0500
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
 
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:51:03.790
-!MESSAGE DS_ERROR: CortexR4: GEL: File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out Load cancelled by user.
+!ENTRY org.eclipse.core.resources 2 10035 2020-01-20 21:21:59.575
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
 
+!ENTRY com.ti.common.core 1 0 2020-01-20 21:21:59.718
+!MESSAGE path=ccs_base/DebugServer
 
-!ENTRY org.eclipse.cdt.dsf 4 10005 2020-01-12 15:51:03.795
-!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@a6c4a1): Status ERROR: com.ti.ccstudio.debug code=20003 File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out
-Load cancelled by user. null' resulted in an error.
-!SUBENTRY 1 com.ti.ccstudio.debug 4 20003 2020-01-12 15:51:03.795
-!MESSAGE File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out
-Load cancelled by user.
+!ENTRY com.ti.common.core 1 0 2020-01-20 21:21:59.723
+!MESSAGE debugServerDir=C:/ti/ccs920/ccs/ccs_base/DebugServer
 
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:51:06.748
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
+!ENTRY org.eclipse.launchbar.core 2 0 2020-01-20 21:22:17.724
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
 
+!ENTRY org.eclipse.launchbar.core 2 0 2020-01-20 21:22:17.749
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
 
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:51:06.923
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
+!ENTRY org.eclipse.launchbar.core 2 0 2020-01-20 21:22:17.766
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
 
+!ENTRY com.ti.ccstudio.ui 1 0 2020-01-20 21:22:17.859
+!MESSAGE CCS IDE session started!
+	CCS build: 9.2.0.00013
+	CCS location: C:/ti/ccs920/ccs
+	Workspace location: C:/Users/arrooney/RTOSSanity
 
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:51:06.938
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-20 21:22:18.062
+!MESSAGE constructor
 
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-20 21:22:18.081
+!MESSAGE done with directories
 
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:51:09.347
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-20 21:22:18.089
+!MESSAGE loading ti_logger
 
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-20 21:22:18.106
+!MESSAGE Platform os: win32
 
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:54:34.388
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-20 21:22:18.123
+!MESSAGE loading cToolsIF
 
+!ENTRY com.ti.ccstudio.debug.server 4 214294189 2020-01-20 21:22:18.137
+!MESSAGE Unexpected CCS exit detected [1/15/20 8:31 PM]!!!
 
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:54:34.449
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-20 21:22:18.165
+!MESSAGE loading cTools
 
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-20 21:22:18.187
+!MESSAGE loading TraceFactory
 
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:55:41.146
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-20 21:22:18.217
+!MESSAGE loading sqlite3
 
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-20 21:22:18.236
+!MESSAGE loading CloudTrace
 
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:55:41.162
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2020-01-20 21:22:18.284
+!MESSAGE CloudTrace interface loaded
 
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2020-01-20 21:22:18.342
+!MESSAGE CCS HTTP adapter started! [ccs.port:50334] - Open 'http://localhost:50334/ide' in web browser to see listing of available APIs...
 
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:55:41.344
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
+!ENTRY com.ti.ccstudio.debug 1 0 2020-01-20 21:22:32.449
+!MESSAGE DS_ERROR: CortexR4: GEL: Encountered a problem loading file: C:\Users\arrooney\RTOSSanity\RTOSSanity\Debug\RTOSSanity.out Could not open file
 
 
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:55:41.358
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:55:41.578
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:55:41.645
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:56:11.558
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:56:11.572
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:56:11.746
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:56:11.761
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:56:12.225
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 15:56:12.363
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:00:43.953
-!MESSAGE DS_ERROR: CortexR4: GEL: File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out Load cancelled by user.
-
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2020-01-12 16:00:43.958
-!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@47cba25b): Status ERROR: com.ti.ccstudio.debug code=20003 File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out
-Load cancelled by user. null' resulted in an error.
-!SUBENTRY 1 com.ti.ccstudio.debug 4 20003 2020-01-12 16:00:43.958
-!MESSAGE File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out
-Load cancelled by user.
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:01:41.684
-!MESSAGE DS_ERROR: CortexR4: GEL: File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out Load cancelled by user.
-
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2020-01-12 16:01:41.689
-!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@4e7389e8): Status ERROR: com.ti.ccstudio.debug code=20003 File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out
-Load cancelled by user. null' resulted in an error.
-!SUBENTRY 1 com.ti.ccstudio.debug 4 20003 2020-01-12 16:01:41.689
-!MESSAGE File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out
-Load cancelled by user.
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:01:43.596
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:01:43.611
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:01:43.794
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:01:43.810
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:01:47.245
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:02:33.190
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:02:33.206
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:02:33.384
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:02:33.400
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:02:33.732
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:02:33.770
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:03:13.814
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:03:13.997
-!MESSAGE DS_ERROR: IcePick: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:03:14.013
-!MESSAGE DS_ERROR: IcePick: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:03:14.194
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:03:14.381
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:03:14.396
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:03:15.645
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:03:15.783
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:09:20.923
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:09:20.939
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:09:21.117
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:09:21.132
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:09:21.762
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:09:21.828
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:10:55.808
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:10:55.871
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:12:57.570
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:12:57.585
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:12:57.766
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:12:57.781
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:12:58.307
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:12:58.363
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:24:56.881
-!MESSAGE DS_ERROR: CortexR4: GEL: File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out Load cancelled by user.
-
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2020-01-12 16:24:56.886
-!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@62851a4a): Status ERROR: com.ti.ccstudio.debug code=20003 File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out
-Load cancelled by user. null' resulted in an error.
-!SUBENTRY 1 com.ti.ccstudio.debug 4 20003 2020-01-12 16:24:56.886
-!MESSAGE File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out
-Load cancelled by user.
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:24:58.848
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:24:59.041
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:24:59.064
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:25:02.439
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:26:10.118
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:26:10.136
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:26:10.319
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:26:10.334
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:26:13.417
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:26:13.564
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:26:46.350
-!MESSAGE DS_ERROR: IcePick: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:26:46.366
-!MESSAGE DS_ERROR: Dap: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:26:46.544
-!MESSAGE DS_ERROR: Dap: Unable to determine target status after 20 attempts
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:26:46.559
-!MESSAGE DS_ERROR: Dap: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:26:49.863
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:26:50.002
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:45:49.788
-!MESSAGE DS_ERROR: CortexR4: GEL: File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out Load cancelled by user.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:47:27.034
-!MESSAGE DS_ERROR: CortexR4: GEL: File: C:\Users\arrooney\ws_arrooney\test\Debug\test.out Load cancelled by user.
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:59:37.874
-!MESSAGE DS_ERROR: CortexR4: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 8.3.0.00003) 
-
-
-!ENTRY com.ti.ccstudio.debug 1 0 2020-01-12 16:59:37.913
-!MESSAGE DS_ERROR: CortexR4: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
-
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2020-01-20 21:22:58.883
+!MESSAGE No repository found at file:/C:/Users/arrooney/AppData/Local/Temp/ccs_618e5e7f-76f0-4fa8-7d80-8db2541f2667/INSTALLER.
