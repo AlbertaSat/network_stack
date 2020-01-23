@@ -50,9 +50,11 @@
 
 #include <csp/csp.h>
 #include <sys_common.h>
-#include <csp/interfaces/csp_if_lo.h>
-//#include <csp/interfaces/csp_if_can.h>
+//#include <csp/interfaces/csp_if_lo.h>
+#include <csp/interfaces/csp_if_can.h>
+#include <csp/drivers/can.h>
 #include <csp/csp_interface.h>
+#include <csp/csp_types.h>
 
 /* Using un-exported header file.
  * This is allowed since we are still in libcsp */
@@ -61,6 +63,7 @@
 /** Example defines */
 #define MY_ADDRESS  1           // Address of local CSP node
 #define MY_PORT     10          // Port to send test traffic to
+#define CSP_HOST_MAC 1
 /* USER CODE END */
 
 /* Include Files */
@@ -124,21 +127,21 @@ CSP_DEFINE_TASK(task_client) {
 
     while (1) {
 
-        /**
-         * Try ping
-         */
-
-        csp_sleep_ms(1000);
+//        /**
+//         * Try ping
+//         */
+//
+//        csp_sleep_ms(1000);
 //        fprintf(stderr, "h\n");
 //        csp_sleep_ms(1000);
-        int result = csp_ping(MY_ADDRESS, 100, 100, CSP_O_NONE);
-        fprintf(stderr, "Ping result %d [ms]\r\n", result);
-
-        csp_sleep_ms(1000);
-
-        /**
-         * Try data packet to server
-         */
+//        int result = csp_ping(MY_ADDRESS, 100, 100, CSP_O_NONE);
+//        fprintf(stderr, "Ping result %d [ms]\r\n", result);
+//
+//        csp_sleep_ms(1000);
+//
+//        /**
+//         * Try data packet to server
+//         */
 
         /* Get packet buffer for data */
         packet = csp_buffer_get(100);
@@ -191,50 +194,40 @@ CSP_DEFINE_TASK(task_client) {
 */
 
 /* USER CODE BEGIN (2) */
+
+//CAN interface struct
+
+csp_iface_t csp_can_tx;
+
+
 /* USER CODE END */
 
 int main(void)
 {
 /* USER CODE BEGIN (3) */
-    /**
-     * Initialise CSP,
-     * No physical interfaces are initialised in this example,
-     * so only the loopback interface is registered.
-     */
+
+    struct csp_can_config can_conf = {.ifc = "can0"};
 
     /* Init buffer system with 10 packets of maximum 300 bytes each */
-    //fprintf(stderr, "Initialising CSP\r\n");
     csp_buffer_init(10, 320);
-//
-//    /* Init CSP with address MY_ADDRESS */
     csp_init(MY_ADDRESS);
-//
-    csp_route_set(CSP_DEFAULT_ROUTE, &csp_if_lo, CSP_NODE_MAC);
-//    /* Start router task with 500 word stack, OS task priority 1 */
+    csp_can_init(CSP_CAN_MASKED, &can_conf);
+
+
+    csp_route_set(CSP_DEFAULT_ROUTE, &csp_can_tx, CSP_HOST_MAC);
+
+    /* Start router task with 500 word stack, OS task priority 1 */
     csp_route_start_task(500, 1);
-//
-    //csp_iflist_add(&csp_if_lo);
 
 
-    /**
-     * Initialise example threads, using pthreads.
-     */
-
-    /* Server */
-    //fprintf(stderr, "Starting Server task\r\n");
     csp_thread_handle_t handle_server;
     csp_thread_create(task_server, "SERVER", 1000, NULL, 0, &handle_server);
+    //csp_thread_handle_t handle_client;
+    //csp_thread_create(task_client, "CLIENT", 1000, NULL, 0, &handle_client);
 
-    csp_thread_handle_t handle_client;
-    csp_thread_create(task_client, "CLIENT", 1000, NULL, 0, &handle_client);
-
-
-    /* Client */
-    //fprintf(stderr, "Starting Client task\r\n");
-
-
-    /* Wait for execution to end (ctrl+c) */
     vTaskStartScheduler();
+
+
     while(1) {
        csp_sleep_ms(1000000);
     }

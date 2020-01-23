@@ -4,8 +4,24 @@
  *  Created on: Nov 15, 2019
  *      Author: arrooney
  */
+#include "FreeRTOS.h"
+#include <stdint.h>
+#include <stdio.h>
+
+#include <stdint.h>
+#include <stdlib.h>
+#include <stdio.h>
+//#include <unistd.h>
+#include <time.h>
+#include <string.h>
+#include <errno.h>
+
+#include "os_semphr.h"
+#include "os_task.h"
 
 #include "can.h"
+#include <csp/csp.h>
+#include <csp/interfaces/csp_if_can.h>
 #include "csp/drivers/can.h"
 
 // the following function definitions are as defined by CSP. This file converts their functionality
@@ -23,7 +39,7 @@ int can_send(can_id_t id, uint8_t* data, uint8_t dlc) {
 }
 
 
-static void * can_rx_thread(void * parameters)
+static void can_rx_thread(void * parameters)
 {
     can_frame_t frame;
     int nbytes;
@@ -31,6 +47,7 @@ static void * can_rx_thread(void * parameters)
     // TODO: check which message box it's arriving on and
     // change dlc field depending on that.
     while (1) {
+
         while(!canIsRxMessageArrived(canREG1, canMESSAGE_BOX2));
         /* Read CAN frame */
         uint8 * const rx_data = pvPortMalloc(8*sizeof(uint8));
@@ -63,21 +80,19 @@ static void * can_rx_thread(void * parameters)
         csp_can_rx_frame((can_frame_t *)&frame, NULL);
     }
 
-    /* We should never reach this point */
-    pthread_exit(NULL);
+    while(1){
+
+    }
 }
 
 int can_init(uint32_t id, uint32_t mask, struct csp_can_config *conf) {
     // must init the can reg.
     // TODO: figure out how to configure halcogen CAN on the fly
     canInit(); // the halcogen call takes no parameters, all configurations are done in the GUI
-    /* Create receive thread */
-//    if (pthread_create(&rx_thread, NULL, socketcan_rx_thread, NULL) != 0) {
-//        csp_log_error("pthread_create: %s", strerror(errno));
-//        return -1;
-//    }
-    xTaskCreate( can_rx_thread, "RX_CAN", 100, ( void * ) NULL, 1, NULL );
-    return 1;
+
+    xTaskCreate(can_rx_thread, "RX_CAN", 100, ( void * ) NULL, 1, NULL );
+
+    return 0;
 }
 
 
