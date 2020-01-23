@@ -33,9 +33,9 @@ int can_init(uint32_t id, uint32_t mask, struct csp_can_config *conf);
 int can_send(can_id_t id, uint8_t* data, uint8_t dlc) {
     // populate data values in message box 1, on can register 1
     // TODO: make a switch case for different message boxes for different dlc values...
-    canUpdateID(canREG1, canMESSAGE_BOX1, id);
-    canTransmit(canREG1, canMESSAGE_BOX1, data); // send the data?
-    return 1;
+    canUpdateID(canREG2, canMESSAGE_BOX1, id);
+    canTransmit(canREG2, canMESSAGE_BOX1, data); // send the data?
+    return 0;
 }
 
 
@@ -48,10 +48,10 @@ static void can_rx_thread(void * parameters)
     // change dlc field depending on that.
     while (1) {
 
-        while(!canIsRxMessageArrived(canREG1, canMESSAGE_BOX2));
+        while(!canIsRxMessageArrived(canREG2, canMESSAGE_BOX2));
         /* Read CAN frame */
         uint8 * const rx_data = pvPortMalloc(8*sizeof(uint8));
-        canGetData(canREG1, canMESSAGE_BOX2, rx_data);
+        canGetData(canREG2, canMESSAGE_BOX2, rx_data);
         frame.data32[0] = (uint32_t) (rx_data);
         frame.data32[1] = (uint32_t) (rx_data + sizeof(uint32_t));
         frame.id = (can_id_t) canGetID(canREG2, canMESSAGE_BOX2);
@@ -90,7 +90,7 @@ int can_init(uint32_t id, uint32_t mask, struct csp_can_config *conf) {
     // TODO: figure out how to configure halcogen CAN on the fly
     canInit(); // the halcogen call takes no parameters, all configurations are done in the GUI
 
-    xTaskCreate(can_rx_thread, "RX_CAN", 100, ( void * ) NULL, 1, NULL );
+    //xTaskCreate(can_rx_thread, "RX_CAN", 100, ( void * ) NULL, 1, NULL );
 
     return 0;
 }

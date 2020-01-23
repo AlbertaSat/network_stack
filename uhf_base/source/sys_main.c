@@ -61,7 +61,8 @@
 #include <csp/arch/csp_thread.h>
 
 /** Example defines */
-#define MY_ADDRESS  1           // Address of local CSP node
+#define SERVER_ADDRESS 1
+#define MY_ADDRESS  2           // Address of local CSP node
 #define MY_PORT     10          // Port to send test traffic to
 #define CSP_HOST_MAC 1
 /* USER CODE END */
@@ -127,21 +128,18 @@ CSP_DEFINE_TASK(task_client) {
 
     while (1) {
 
-//        /**
-//         * Try ping
-//         */
-//
-//        csp_sleep_ms(1000);
-//        fprintf(stderr, "h\n");
-//        csp_sleep_ms(1000);
-//        int result = csp_ping(MY_ADDRESS, 100, 100, CSP_O_NONE);
-//        fprintf(stderr, "Ping result %d [ms]\r\n", result);
-//
-//        csp_sleep_ms(1000);
-//
-//        /**
-//         * Try data packet to server
-//         */
+        /**
+         * Try ping
+         */
+
+        int result = csp_ping(SERVER_ADDRESS, 100, 100, CSP_O_NONE);
+        fprintf(stderr, "Ping result %d [ms]\r\n", result);
+
+        csp_sleep_ms(100);
+
+        /**
+         * Try data packet to server
+         */
 
         /* Get packet buffer for data */
         packet = csp_buffer_get(100);
@@ -152,7 +150,7 @@ CSP_DEFINE_TASK(task_client) {
         }
 
         /* Connect to host HOST, port PORT with regular UDP-like protocol and 1000 ms timeout */
-        conn = csp_connect(CSP_PRIO_NORM, MY_ADDRESS, MY_PORT, 1000, CSP_O_NONE);
+        conn = csp_connect(CSP_PRIO_NORM, SERVER_ADDRESS, MY_PORT, 1000, CSP_O_NONE);
         if (conn == NULL) {
             /* Connect failed */
             fprintf(stderr, "Connection failed\n");
@@ -197,7 +195,7 @@ CSP_DEFINE_TASK(task_client) {
 
 //CAN interface struct
 
-csp_iface_t csp_can_tx;
+//csp_iface_t csp_can_tx;
 
 
 /* USER CODE END */
@@ -214,16 +212,16 @@ int main(void)
     csp_can_init(CSP_CAN_MASKED, &can_conf);
 
 
-    csp_route_set(CSP_DEFAULT_ROUTE, &csp_can_tx, CSP_HOST_MAC);
+    csp_route_set(CSP_DEFAULT_ROUTE, &csp_if_can, CSP_HOST_MAC);
 
     /* Start router task with 500 word stack, OS task priority 1 */
     csp_route_start_task(500, 1);
 
 
-    csp_thread_handle_t handle_server;
-    csp_thread_create(task_server, "SERVER", 1000, NULL, 0, &handle_server);
-    //csp_thread_handle_t handle_client;
-    //csp_thread_create(task_client, "CLIENT", 1000, NULL, 0, &handle_client);
+    //csp_thread_handle_t handle_server;
+    //csp_thread_create(task_server, "SERVER", 1000, NULL, 0, &handle_server);
+    csp_thread_handle_t handle_client;
+    csp_thread_create(task_client, "CLIENT", 1000, NULL, 0, &handle_client);
 
     vTaskStartScheduler();
 
