@@ -14,5 +14,8 @@ All source files are in the uhf_base/source/ folder, with subdirectories from th
 
 The entry point to the application is found in source/sys_main.c - here you will find the main() funciton which begins the client/server code.
 
+The docs/ folder will contain all important documents.
+
 ## Notes
 #### This is the place for developers to jot down any important lessons learned to speed up the process for future development/debugging
+Test
