@@ -1,4 +1,6 @@
 # Network Stack
+Please post updates to slack:
+[![slack](https://img.shields.io/badge/slack-join%20the%20conversation-ff69b4.svg)](https://app.slack.com/client/T1QPU1NHG/C5MJN5YN6)
 
 This repository contains work regarding the Network stack, CSP. It includes code from both libcsp, https://github.com/libcsp/libcsp as well as from FreeRTOS https://github.com/FreeRTOS
 
