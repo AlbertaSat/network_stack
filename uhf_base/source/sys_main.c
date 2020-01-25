@@ -65,6 +65,9 @@
 #define MY_ADDRESS  2           // Address of local CSP node
 #define MY_PORT     10          // Port to send test traffic to
 #define CSP_HOST_MAC 1
+
+//#define SERVER
+
 /* USER CODE END */
 
 /* Include Files */
@@ -218,10 +221,13 @@ int main(void)
     csp_route_start_task(500, 1);
 
 
-    //csp_thread_handle_t handle_server;
-    //csp_thread_create(task_server, "SERVER", 1000, NULL, 0, &handle_server);
-    csp_thread_handle_t handle_client;
-    csp_thread_create(task_client, "CLIENT", 1000, NULL, 0, &handle_client);
+    #ifdef SERVER
+        csp_thread_handle_t handle_server;
+        csp_thread_create(task_server, "SERVER", 1000, NULL, 0, &handle_server);
+    #else
+        csp_thread_handle_t handle_client;
+        csp_thread_create(task_client, "CLIENT", 1000, NULL, 0, &handle_client);
+    #endif
 
     vTaskStartScheduler();
 
@@ -230,7 +236,6 @@ int main(void)
        csp_sleep_ms(1000000);
     }
 
-    return 0;
 /* USER CODE END */
 
     return 0;

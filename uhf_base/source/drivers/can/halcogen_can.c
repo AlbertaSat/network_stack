@@ -48,7 +48,9 @@ static void can_rx_thread(void * parameters)
     // change dlc field depending on that.
     while (1) {
 
-        while(!canIsRxMessageArrived(canREG2, canMESSAGE_BOX2));
+        while(!canIsRxMessageArrived(canREG2, canMESSAGE_BOX2)){
+            vTaskDelay(100);
+        }
         /* Read CAN frame */
         uint8 * const rx_data = pvPortMalloc(8*sizeof(uint8));
         canGetData(canREG2, canMESSAGE_BOX2, rx_data);
@@ -80,17 +82,15 @@ static void can_rx_thread(void * parameters)
         csp_can_rx_frame((can_frame_t *)&frame, NULL);
     }
 
-    while(1){
-
-    }
+    return 0;
 }
 
 int can_init(uint32_t id, uint32_t mask, struct csp_can_config *conf) {
     // must init the can reg.
     // TODO: figure out how to configure halcogen CAN on the fly
-    canInit(); // the halcogen call takes no parameters, all configurations are done in the GUI
-
-    //xTaskCreate(can_rx_thread, "RX_CAN", 100, ( void * ) NULL, 1, NULL );
+    canInit(); // the halcogen call takes no parameters, all configurations are done in the halcogen GUI
+    xTaskHandle can_rx;
+    xTaskCreate(can_rx_thread, "RX_CAN", 1000, ( void * ) NULL, 0, &can_rx );
 
     return 0;
 }
