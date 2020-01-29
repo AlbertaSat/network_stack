@@ -33,8 +33,8 @@ int can_init(uint32_t id, uint32_t mask, struct csp_can_config *conf);
 int can_send(can_id_t id, uint8_t* data, uint8_t dlc) {
     // populate data values in message box 1, on can register 1
     // TODO: make a switch case for different message boxes for different dlc values...
-    canUpdateID(canREG2, canMESSAGE_BOX1, id);
-    canTransmit(canREG2, canMESSAGE_BOX1, data); // send the data?
+    //canUpdateID(canREG2, canMESSAGE_BOX1, id);
+    canTransmit(canREG2, canMESSAGE_BOX2, data); // send the data?
     return 0;
 }
 
@@ -48,15 +48,16 @@ static void can_rx_thread(void * parameters)
     // change dlc field depending on that.
     while (1) {
 
-        while(!canIsRxMessageArrived(canREG2, canMESSAGE_BOX2)){
-            vTaskDelay(100);
+        while(!canIsRxMessageArrived(canREG2, canMESSAGE_BOX1)){
+            vTaskDelay(10);
         }
         /* Read CAN frame */
-        uint8 * const rx_data = pvPortMalloc(8*sizeof(uint8));
-        canGetData(canREG2, canMESSAGE_BOX2, rx_data);
+        //uint8_t * rx_data = (uint8_t *)pvPortMalloc(8*sizeof(uint8_t));
+        uint8_t rx_data[8] = {0};
+        canGetData(canREG2, canMESSAGE_BOX1, rx_data);
         frame.data32[0] = (uint32_t) (rx_data);
         frame.data32[1] = (uint32_t) (rx_data + sizeof(uint32_t));
-        frame.id = (can_id_t) canGetID(canREG2, canMESSAGE_BOX2);
+        frame.id = (can_id_t) canGetID(canREG2, canMESSAGE_BOX1);
         frame.dlc = 8; // TODO make this not a magic number
 //        if (nbytes < 0) {
 //            csp_log_error("read: %s", strerror(errno));
@@ -76,7 +77,7 @@ static void can_rx_thread(void * parameters)
 //        }
 
 //        /* Strip flags */
-//        frame.can_id &= CAN_EFF_MASK;
+        //frame.id &= CAN_EFF_MASK;
 //
 //        /* Call RX callback */
         csp_can_rx_frame((can_frame_t *)&frame, NULL);
