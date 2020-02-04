@@ -67,6 +67,9 @@
 #include "sys_dma.h"
 
 /* USER CODE BEGIN (0) */
+#include <csp/drivers/can.h>
+#include <csp/csp.h>
+#include <csp/interfaces/csp_if_can.h>
 /* USER CODE END */
 #pragma WEAK(esmGroup1Notification)
 void esmGroup1Notification(uint32 channel)
@@ -139,6 +142,36 @@ void canMessageNotification(canBASE_t *node, uint32 messageBox)
 {
 /*  enter user code between the USER CODE BEGIN and USER CODE END. */
 /* USER CODE BEGIN (15) */
+    can_frame_t frame;
+    int nbytes;
+    uint8_t rx_data[8] = {0};
+    canGetData(canREG2, canMESSAGE_BOX1, rx_data);
+    frame.data32[0] = (uint32_t) (rx_data);
+    frame.data32[1] = (uint32_t) (rx_data + sizeof(uint32_t));
+    frame.id = (can_id_t) canGetID(canREG2, canMESSAGE_BOX1);
+    frame.dlc = (uint8_t) 8; // TODO make this not a magic number
+//        if (nbytes < 0) {
+//            csp_log_error("read: %s", strerror(errno));
+//            continue;
+//        }
+//
+//        if (nbytes != sizeof(frame)) {
+//            csp_log_warn("Read incomplete CAN frame");
+//            continue;
+//        }
+//
+//        /* Frame type */
+//        if (frame.can_id & (CAN_ERR_FLAG | CAN_RTR_FLAG) || !(frame.can_id & CAN_EFF_FLAG)) {
+//            /* Drop error and remote frames */
+//            csp_log_warn("Discarding ERR/RTR/SFF frame");
+//            continue;
+//        }
+
+//        /* Strip flags */
+    //frame.id &= CAN_EFF_MASK;
+//
+//        /* Call RX callback */
+    csp_can_rx_frame((can_frame_t *)&frame, NULL);
 /* USER CODE END */
 }
 

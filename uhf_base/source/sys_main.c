@@ -211,7 +211,7 @@ int main(void)
     struct csp_can_config can_conf = {.ifc = "can0"};
 
     /* Init buffer system with 10 packets of maximum 300 bytes each */
-    csp_buffer_init(10, 320);
+    csp_buffer_init(10, 300);
     csp_init(MY_ADDRESS);
     csp_can_init(CSP_CAN_MASKED, &can_conf);
 
@@ -234,7 +234,7 @@ int main(void)
 
 
     while(1) {
-       csp_sleep_ms(1000000);
+       //csp_sleep_ms(1000000);
     }
 
 /* USER CODE END */

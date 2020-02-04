@@ -33,7 +33,7 @@ int can_init(uint32_t id, uint32_t mask, struct csp_can_config *conf);
 int can_send(can_id_t id, uint8_t* data, uint8_t dlc) {
     // populate data values in message box 1, on can register 1
     // TODO: make a switch case for different message boxes for different dlc values...
-    //canUpdateID(canREG2, canMESSAGE_BOX1, id);
+    //canUpdateID(canREG2, canMESSAGE_BOX2, id);
     canTransmit(canREG2, canMESSAGE_BOX2, data); // send the data?
     return 0;
 }
@@ -58,7 +58,7 @@ static void can_rx_thread(void * parameters)
         frame.data32[0] = (uint32_t) (rx_data);
         frame.data32[1] = (uint32_t) (rx_data + sizeof(uint32_t));
         frame.id = (can_id_t) canGetID(canREG2, canMESSAGE_BOX1);
-        frame.dlc = 8; // TODO make this not a magic number
+        frame.dlc = 8UL; // TODO make this not a magic number
 //        if (nbytes < 0) {
 //            csp_log_error("read: %s", strerror(errno));
 //            continue;
@@ -90,8 +90,8 @@ int can_init(uint32_t id, uint32_t mask, struct csp_can_config *conf) {
     // must init the can reg.
     // TODO: figure out how to configure halcogen CAN on the fly
     canInit(); // the halcogen call takes no parameters, all configurations are done in the halcogen GUI
-    xTaskHandle can_rx;
-    xTaskCreate(can_rx_thread, "RX_CAN", 1000, ( void * ) NULL, 0, &can_rx );
+    //xTaskHandle can_rx;
+  //  xTaskCreate(can_rx_thread, "RX_CAN", 1000, ( void * ) NULL, 0, &can_rx );
 
     return 0;
 }
