@@ -66,7 +66,7 @@
 #define MY_PORT     10          // Port to send test traffic to
 #define CSP_HOST_MAC 1
 
-#define SERVER
+//#define SERVER
 
 /* USER CODE END */
 

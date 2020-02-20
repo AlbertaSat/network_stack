@@ -402,7 +402,7 @@ static CSP_DEFINE_TASK(csp_can_rx_task)
 
 int csp_can_rx_frame(can_frame_t *frame, CSP_BASE_TYPE *task_woken)
 {
-	if (csp_queue_enqueue_isr(csp_can_rx_queue, frame, task_woken) != CSP_QUEUE_OK)
+	if (csp_queue_enqueue(csp_can_rx_queue, frame, 1000) != CSP_QUEUE_OK)
 		return CSP_ERR_NOMEM;
 
 	return CSP_ERR_NONE;
