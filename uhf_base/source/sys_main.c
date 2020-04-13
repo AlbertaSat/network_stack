@@ -47,6 +47,7 @@
 #include <string.h>
 #include "FreeRTOS.h"
 #include "os_task.h"
+#include "can.h"
 
 #include <csp/csp.h>
 #include <sys_common.h>
@@ -207,6 +208,25 @@ int main(void)
 {
 /* USER CODE BEGIN (3) */
 
+
+    //Test CAN message boxes w/ no incoming ID filtering
+    canInit();
+
+    //Sender
+    uint8 data[8] = {'Y', 'E', 'S', 'S', 'S', 'S', "I", "R"};
+    canUpdateID(canREG2, 2, 0b01110101010101010101010101010101);
+    while(1){
+        canTransmit(canREG2, 2, data);
+    }
+
+    ////Receiver
+    //uint8 recvdata[8] = {0};
+    //uint32 readID = 0;
+    //while(1){
+    //    if(canGetData(canREG2, 1, recvdata)){
+    //        readID = canGetID(canREG2,1);
+    //    }
+    //}
 
     struct csp_can_config can_conf = {.ifc = "can0"};
 
