@@ -67,7 +67,7 @@
 #define MY_PORT     10          // Port to send test traffic to
 #define CSP_HOST_MAC 1
 
-//#define SERVER
+#define SERVER
 
 /* USER CODE END */
 
@@ -210,14 +210,15 @@ int main(void)
 
 
     //Test CAN message boxes w/ no incoming ID filtering
-    canInit();
-
     //Sender
-    uint8 data[8] = {'Y', 'E', 'S', 'S', 'S', 'S', "I", "R"};
-    canUpdateID(canREG2, 2, 0b01110101010101010101010101010101);
-    while(1){
-        canTransmit(canREG2, 2, data);
-    }
+//    canInit();
+//
+//    //Sender
+//    uint8 data[8] = {'Y', 'E', 'S', 'S', 'S', 'S', "I", "R"};
+//    canUpdateID(canREG2, 2, 0b01110101010101010101010101010101);
+//    while(1){
+//        canTransmit(canREG2, 2, data);
+//    }
 
     ////Receiver
     //uint8 recvdata[8] = {0};
