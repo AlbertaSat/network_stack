@@ -63,7 +63,7 @@
 
 /** Example defines */
 #define SERVER_ADDRESS 1
-#define MY_ADDRESS  2           // Address of local CSP node
+#define MY_ADDRESS  1           // Address of local CSP node
 #define MY_PORT     10          // Port to send test traffic to
 #define CSP_HOST_MAC 1
 

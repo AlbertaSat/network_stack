@@ -78,54 +78,54 @@ static void can_rx_thread(void * parameters)
 {
     can_frame_t frame;
     int nbytes;
-    uint8_t dlc;
+    uint8_t dlc = 0;
     uint8_t boxnum;
+    //uint8_t * rx_data = (uint8_t *)pvPortMalloc(8*sizeof(uint8_t));
+    uint8_t rx_data[8] = {0};                           //change this to dynamic memory in future
 
     // TODO: check which message box it's arriving on and
     // change dlc field depending on that.
 
     while (1) {
-        while(!(canIsRxMessageArrived(canREG2, canMESSAGE_BOX1) ||
-                canIsRxMessageArrived(canREG2, canMESSAGE_BOX3) ||
-                canIsRxMessageArrived(canREG2, canMESSAGE_BOX5) ||
-                canIsRxMessageArrived(canREG2, canMESSAGE_BOX7) ||
-                canIsRxMessageArrived(canREG2, canMESSAGE_BOX9) ||
-                canIsRxMessageArrived(canREG2, canMESSAGE_BOX11) ||
-                canIsRxMessageArrived(canREG2, canMESSAGE_BOX13) ||
-                canIsRxMessageArrived(canREG2, canMESSAGE_BOX15))){
+        uint8_t status;
+        while(1){
+            status = canGetData(canREG2, canMESSAGE_BOX1, rx_data);
+            if(canGetData(canREG2, canMESSAGE_BOX1, rx_data)){
+                dlc = 8;
+                boxnum = canMESSAGE_BOX1;
+                break;
+            } else if (canGetData(canREG2, canMESSAGE_BOX3, rx_data)){
+                dlc = 7;
+                boxnum = canMESSAGE_BOX3;
+                break;
+            } else if (canGetData(canREG2, canMESSAGE_BOX5, rx_data)){
+                dlc = 6;
+                boxnum = canMESSAGE_BOX5;
+                break;
+            } else if (canGetData(canREG2, canMESSAGE_BOX7, rx_data)){
+                dlc = 5;
+                boxnum = canMESSAGE_BOX7;
+                break;
+            } else if (canGetData(canREG2, canMESSAGE_BOX9, rx_data)){
+                dlc = 4;
+                boxnum = canMESSAGE_BOX9;
+                break;
+            } else if (canGetData(canREG2, canMESSAGE_BOX11, rx_data)){
+                dlc = 3;
+                boxnum = canMESSAGE_BOX11;
+                break;
+            } else if (canGetData(canREG2, canMESSAGE_BOX13, rx_data)){
+                dlc = 2;
+                boxnum = canMESSAGE_BOX13;
+                break;
+            } else if (canGetData(canREG2, canMESSAGE_BOX15, rx_data)){
+                dlc = 1;
+                boxnum = canMESSAGE_BOX15;
+                break;
+            }
             vTaskDelay(10);
         }
 
-        if(canIsRxMessageArrived(canREG2, canMESSAGE_BOX1)){
-            dlc = 8;
-            boxnum = canMESSAGE_BOX1;
-        } else if (canIsRxMessageArrived(canREG2, canMESSAGE_BOX3)){
-            dlc = 7;
-            boxnum = canMESSAGE_BOX3;
-        } else if (canIsRxMessageArrived(canREG2, canMESSAGE_BOX5)){
-            dlc = 6;
-            boxnum = canMESSAGE_BOX5;
-        } else if (canIsRxMessageArrived(canREG2, canMESSAGE_BOX7)){
-            dlc = 5;
-            boxnum = canMESSAGE_BOX7;
-        } else if (canIsRxMessageArrived(canREG2, canMESSAGE_BOX9)){
-            dlc = 4;
-            boxnum = canMESSAGE_BOX9;
-        } else if (canIsRxMessageArrived(canREG2, canMESSAGE_BOX11)){
-            dlc = 3;
-            boxnum = canMESSAGE_BOX11;
-        } else if (canIsRxMessageArrived(canREG2, canMESSAGE_BOX13)){
-            dlc = 2;
-            boxnum = canMESSAGE_BOX13;
-        } else if (canIsRxMessageArrived(canREG2, canMESSAGE_BOX15)){
-            dlc = 1;
-            boxnum = canMESSAGE_BOX15;
-        }
-
-
-        //uint8_t * rx_data = (uint8_t *)pvPortMalloc(8*sizeof(uint8_t));
-        uint8_t rx_data[8] = {0};                           //change this to dynamic memory in future
-        canGetData(canREG2, boxnum, rx_data);               //should be good
         frame.data[0] = rx_data[0];                         //TODO: does this have to be element-wise?
         frame.data[1] = rx_data[1];
         frame.data[2] = rx_data[2];
