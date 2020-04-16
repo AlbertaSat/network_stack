@@ -85,7 +85,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 				 CFP_MAKE_ID((uint32_t)(1 << CFP_ID_SIZE) - 1))
 
 /* Maximum Transmission Unit for CSP over CAN */
-#define CSP_CAN_MTU		256
+#define CSP_CAN_MTU		64 //(256 originally)
 
 /* Maximum number of frames in RX queue */
 #define CSP_CAN_RX_QUEUE_SIZE	100
@@ -402,7 +402,7 @@ static CSP_DEFINE_TASK(csp_can_rx_task)
 
 int csp_can_rx_frame(can_frame_t *frame, CSP_BASE_TYPE *task_woken)
 {
-	if (csp_queue_enqueue(csp_can_rx_queue, frame, 1000) != CSP_QUEUE_OK)
+	if (csp_queue_enqueue(csp_can_rx_queue, frame, task_woken) != CSP_QUEUE_OK)
 		return CSP_ERR_NOMEM;
 
 	return CSP_ERR_NONE;

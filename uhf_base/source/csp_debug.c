@@ -99,9 +99,11 @@ void do_csp_debug(csp_debug_level_t level, const char *format, ...)
 #ifdef __AVR__
 		vfprintf_P(stdout, format, args);
 #else
-		vprintf(format, args);
+//		vprintf(format, args);
+		fprintf(stderr, format, args);
 #endif
-		printf("\r\n");
+//		printf("\r\n");
+		fprintf(stderr, "\r\n");
 		csp_sys_set_color(COLOR_RESET);
 	}
 
@@ -125,9 +127,11 @@ int csp_debug_get_level(csp_debug_level_t level)
 void csp_debug_toggle_level(csp_debug_level_t level)
 {
 	if (level > CSP_LOCK) {
-		printf("Max level is 6\r\n");
+//		printf("Max level is 6\r\n");
+	    fprintf(stderr, "Max level is 6\r\n");
 		return;
 	}
 	csp_debug_level_enabled[level] = (csp_debug_level_enabled[level]) ? false : true;
-	printf("Level %u: value %u\r\n", level, csp_debug_level_enabled[level]);
+//	printf("Level %u: value %u\r\n", level, csp_debug_level_enabled[level]);
+	fprintf(stderr, "Level %u: value %u\r\n", level, csp_debug_level_enabled[level]);
 }

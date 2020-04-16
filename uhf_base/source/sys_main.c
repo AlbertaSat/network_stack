@@ -136,7 +136,7 @@ CSP_DEFINE_TASK(task_client) {
          * Try ping
          */
 
-        int result = csp_ping(SERVER_ADDRESS, 100, 100, CSP_O_NONE);
+        int result = csp_ping(SERVER_ADDRESS, 1000, 8, CSP_O_NONE);
         fprintf(stderr, "Ping result %d [ms]\r\n", result);
 
         csp_sleep_ms(100);
@@ -211,28 +211,28 @@ int main(void)
 
     //Test CAN message boxes w/ no incoming ID filtering
     //Sender
-//    canInit();
+    canInit();
 //
 //    //Sender
-//    uint8 data[8] = {'Y', 'E', 'S', 'S', 'S', 'S', "I", "R"};
+//    uint8 data[8] = {'Y', 'E', 'S', 'S', 'S', 'S', 'I', 'R'};
 //    canUpdateID(canREG2, 2, 0b01110101010101010101010101010101);
 //    while(1){
 //        canTransmit(canREG2, 2, data);
 //    }
 
-    ////Receiver
-    //uint8 recvdata[8] = {0};
-    //uint32 readID = 0;
-    //while(1){
-    //    if(canGetData(canREG2, 1, recvdata)){
-    //        readID = canGetID(canREG2,1);
-    //    }
-    //}
+    //Receiver
+//    uint8 recvdata[8] = {0};
+//    uint32 readID = 0;
+//    while(1){
+//        if(canGetData(canREG2, 1, recvdata)){
+//            readID = canGetID(canREG2,1);
+//        }
+//    }
 
     struct csp_can_config can_conf = {.ifc = "can0"};
 
     /* Init buffer system with 10 packets of maximum 300 bytes each */
-    csp_buffer_init(10, 320);
+    csp_buffer_init(100, 300);
     csp_init(MY_ADDRESS);
     csp_can_init(CSP_CAN_MASKED, &can_conf);
 

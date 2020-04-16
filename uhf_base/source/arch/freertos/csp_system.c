@@ -135,5 +135,5 @@ void csp_sys_set_color(csp_color_t color) {
 			modifier_code = 0; break;
 	}
 
-	printf("\033[%u;%um", modifier_code, color_code);
+//	printf("\033[%u;%um", modifier_code, color_code);
 }

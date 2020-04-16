@@ -30,9 +30,9 @@
 int can_send(can_id_t id, uint8_t * data, uint8_t dlc); // The CSP definition of sending a CAN frame
 int can_init(uint32_t id, uint32_t mask, struct csp_can_config *conf);
 
-// This sends data byte by byte, dlc should always be 8
 int can_send(can_id_t id, uint8_t* data, uint8_t dlc) {
 
+    id = id | 0x60000000;
     switch(dlc){
         case 8:
             canUpdateID(canREG2, canMESSAGE_BOX2, id);
@@ -83,13 +83,10 @@ static void can_rx_thread(void * parameters)
     //uint8_t * rx_data = (uint8_t *)pvPortMalloc(8*sizeof(uint8_t));
     uint8_t rx_data[8] = {0};                           //change this to dynamic memory in future
 
-    // TODO: check which message box it's arriving on and
-    // change dlc field depending on that.
-
     while (1) {
-        uint8_t status;
+        //uint8_t status;
         while(1){
-            status = canGetData(canREG2, canMESSAGE_BOX1, rx_data);
+            //status = canGetData(canREG2, canMESSAGE_BOX1, rx_data);
             if(canGetData(canREG2, canMESSAGE_BOX1, rx_data)){
                 dlc = 8;
                 boxnum = canMESSAGE_BOX1;
