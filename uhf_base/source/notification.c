@@ -67,6 +67,7 @@
 #include "sys_dma.h"
 
 /* USER CODE BEGIN (0) */
+#include <csp/drivers/can.h>
 /* USER CODE END */
 #pragma WEAK(esmGroup1Notification)
 void esmGroup1Notification(uint32 channel)
@@ -139,6 +140,7 @@ void canMessageNotification(canBASE_t *node, uint32 messageBox)
 {
 /*  enter user code between the USER CODE BEGIN and USER CODE END. */
 /* USER CODE BEGIN (15) */
+    can_recv(messageBox);
 /* USER CODE END */
 }
 

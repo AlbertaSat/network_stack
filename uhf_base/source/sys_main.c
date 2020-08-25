@@ -136,7 +136,7 @@ CSP_DEFINE_TASK(task_client) {
          * Try ping
          */
 
-        int result = csp_ping(SERVER_ADDRESS, 1000, 8, CSP_O_NONE);
+        int result = csp_ping(SERVER_ADDRESS, 1000, 64, CSP_O_NONE);
         fprintf(stderr, "Ping result %d [ms]\r\n", result);
 
         csp_sleep_ms(100);

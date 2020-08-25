@@ -58,6 +58,7 @@ typedef enum {
 
 int can_init(uint32_t id, uint32_t mask, struct csp_can_config *conf);
 int can_send(can_id_t id, uint8_t * data, uint8_t dlc);
+int can_recv(uint32_t messageBox);
 
 int csp_can_rx_frame(can_frame_t *frame, CSP_BASE_TYPE *task_woken);
 

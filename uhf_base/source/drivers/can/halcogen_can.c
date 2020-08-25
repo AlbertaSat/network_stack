@@ -73,66 +73,58 @@ int can_send(can_id_t id, uint8_t* data, uint8_t dlc) {
     return 0;
 }
 
-
-static void can_rx_thread(void * parameters)
+//note that this is entered via interrupt in notification.c
+int can_recv(uint32_t messageBox)
 {
     can_frame_t frame;
-    int nbytes;
+    //int nbytes;
     uint8_t dlc = 0;
-    uint8_t boxnum;
     //uint8_t * rx_data = (uint8_t *)pvPortMalloc(8*sizeof(uint8_t));
     uint8_t rx_data[8] = {0};                           //change this to dynamic memory in future
 
-    while (1) {
-        //uint8_t status;
-        while(1){
-            //status = canGetData(canREG2, canMESSAGE_BOX1, rx_data);
-            if(canGetData(canREG2, canMESSAGE_BOX1, rx_data)){
-                dlc = 8;
-                boxnum = canMESSAGE_BOX1;
-                break;
-            } else if (canGetData(canREG2, canMESSAGE_BOX3, rx_data)){
-                dlc = 7;
-                boxnum = canMESSAGE_BOX3;
-                break;
-            } else if (canGetData(canREG2, canMESSAGE_BOX5, rx_data)){
-                dlc = 6;
-                boxnum = canMESSAGE_BOX5;
-                break;
-            } else if (canGetData(canREG2, canMESSAGE_BOX7, rx_data)){
-                dlc = 5;
-                boxnum = canMESSAGE_BOX7;
-                break;
-            } else if (canGetData(canREG2, canMESSAGE_BOX9, rx_data)){
-                dlc = 4;
-                boxnum = canMESSAGE_BOX9;
-                break;
-            } else if (canGetData(canREG2, canMESSAGE_BOX11, rx_data)){
-                dlc = 3;
-                boxnum = canMESSAGE_BOX11;
-                break;
-            } else if (canGetData(canREG2, canMESSAGE_BOX13, rx_data)){
-                dlc = 2;
-                boxnum = canMESSAGE_BOX13;
-                break;
-            } else if (canGetData(canREG2, canMESSAGE_BOX15, rx_data)){
-                dlc = 1;
-                boxnum = canMESSAGE_BOX15;
-                break;
-            }
-            vTaskDelay(10);
-        }
+    switch(messageBox){
+        case 1:
+            dlc = 8;
+            break;
+        case 3:
+            dlc = 7;
+            break;
+        case 5:
+            dlc = 6;
+            break;
+        case 7:
+            dlc = 5;
+            break;
+        case 9:
+            dlc = 4;
+            break;
+        case 11:
+            dlc = 3;
+            break;
+        case 13:
+            dlc = 2;
+            break;
+        case 15:
+            dlc = 1;
+            break;
+        default:
+            return 1;
+    }
 
-        frame.data[0] = rx_data[0];                         //TODO: does this have to be element-wise?
-        frame.data[1] = rx_data[1];
-        frame.data[2] = rx_data[2];
-        frame.data[3] = rx_data[3];
-        frame.data[4] = rx_data[4];
-        frame.data[5] = rx_data[5];
-        frame.data[6] = rx_data[6];
-        frame.data[7] = rx_data[7];
-        frame.id = (can_id_t) canGetID(canREG2, boxnum);    //should be good
-        frame.dlc = dlc;                                    //should be good
+    //vTaskDelay(10);
+
+    canGetData(canREG2, messageBox, rx_data);
+
+    frame.data[0] = rx_data[0];                         //TODO: does this have to be element-wise?
+    frame.data[1] = rx_data[1];
+    frame.data[2] = rx_data[2];
+    frame.data[3] = rx_data[3];
+    frame.data[4] = rx_data[4];
+    frame.data[5] = rx_data[5];
+    frame.data[6] = rx_data[6];
+    frame.data[7] = rx_data[7];
+    frame.id = (can_id_t) canGetID(canREG2, messageBox);    //should be good
+    frame.dlc = dlc;                                    //should be good
 
 //        if (nbytes < 0) {
 //            csp_log_error("read: %s", strerror(errno));
@@ -143,20 +135,19 @@ static void can_rx_thread(void * parameters)
 //            csp_log_warn("Read incomplete CAN frame");
 //            continue;
 //        }
-//
-//        /* Frame type */
+
+    /* Frame type */
 //        if (frame.can_id & (CAN_ERR_FLAG | CAN_RTR_FLAG) || !(frame.can_id & CAN_EFF_FLAG)) {
 //            /* Drop error and remote frames */
 //            csp_log_warn("Discarding ERR/RTR/SFF frame");
 //            continue;
 //        }
-
-//        /* Strip flags */
-        //frame.id &= CAN_EFF_MASK;
 //
-//        /* Call RX callback */
-        csp_can_rx_frame((can_frame_t *)&frame, NULL);
-    }
+//        /* Strip flags */
+//        frame.id &= CAN_EFF_MASK;
+
+    /* Call RX callback */
+    csp_can_rx_frame((can_frame_t *)&frame, NULL);
 
     return 0;
 }
@@ -165,8 +156,8 @@ int can_init(uint32_t id, uint32_t mask, struct csp_can_config *conf) {
     // must init the can reg.
     // TODO: figure out how to configure halcogen CAN on the fly
     canInit(); // the halcogen call takes no parameters, all configurations are done in the halcogen GUI
-    xTaskHandle can_rx;
-    xTaskCreate(can_rx_thread, "RX_CAN", 1000, ( void * ) NULL, 0, &can_rx );
+    //xTaskHandle can_rx;
+    //xTaskCreate(can_rx_thread, "RX_CAN", 1000, ( void * ) NULL, 0, &can_rx );
 
     return 0;
 }
